@@ -27,3 +27,5 @@ finally:
     time.sleep(10)
     # закрываем браузер после всех манипуляций
     browser.quit()
+
+#задача https://stepik.org/lesson/228249/step/3?unit=200781
