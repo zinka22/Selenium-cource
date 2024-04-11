@@ -11,16 +11,16 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    first_number = browser.find_element(By.CSS_SELECTOR, "#num1")
+    first_number = browser.find_element(By.CSS_SELECTOR, '[id="num1"]')
     first = first_number.text
-    second_number = browser.find_element(By.CSS_SELECTOR, "#num2")
+    second_number = browser.find_element(By.CSS_SELECTOR, '[id="num2"]')
     second = second_number.text
     math_result = str(int(first) + int(second))
 
-    select_element = Select(browser.find_element(By.CSS_SELECTOR, "#dropdown"))
+    select_element = Select(browser.find_element(By.CSS_SELECTOR, '[id="dropdown"]'))
     select_element.select_by_value(value=str(math_result))
 
-    submit_button = browser.find_element(By.CSS_SELECTOR, '.btn-default')
+    submit_button = browser.find_element(By.CSS_SELECTOR, '[class="btn btn-default"]')
     submit_button.click()
 
 
