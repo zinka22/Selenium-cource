@@ -20,7 +20,7 @@ try:
     select_element = Select(browser.find_element(By.CSS_SELECTOR, "#dropdown"))
     select_element.select_by_value(value=str(math_result))
 
-    submit_button = browser.find_element(By.CSS_SELECTOR, "[class='btn btn-default']")
+    submit_button = browser.find_element(By.CSS_SELECTOR, '.btn-default')
     submit_button.click()
 
 

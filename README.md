@@ -11,3 +11,9 @@ check_registration_with_bugz.py https://stepik.org/lesson/138920/step/11?unit=19
 radio_and_checkbox.py https://stepik.org/lesson/165493/step/5?unit=140087
 
 get_attribute.py https://stepik.org/lesson/165493/step/7?unit=140087
+
+Локально курс по Selenium собран в папку Selenium-cource, внутри проекта не настроено окружение.
+Запуск из консоли selenium_env\Scripts\activate.bat, далее работа в venv
+
+
+
