@@ -1,35 +1,41 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
+import math
 import time
 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 browser = None
 
+
+def calc(x):
+    return str(math.log(abs(12*math.sin(x))))
+
+
 try:
-    link = "https://suninjuly.github.io/selects1.html"
+    link = "https://SunInJuly.github.io/execute_script.html"
     browser = webdriver.Chrome()
     browser.get(link)
 
-    first_number = browser.find_element(By.CSS_SELECTOR, '[id="num1"]')
-    first = first_number.text
-    second_number = browser.find_element(By.CSS_SELECTOR, '[id="num2"]')
-    second = second_number.text
-    math_result = str(int(first) + int(second))
+    find_element_x = browser.find_element(value="input_value")
+    element_x_text = int(find_element_x.text)
+    math_result = calc(element_x_text)
 
-    select_element = Select(browser.find_element(By.CSS_SELECTOR, '[id="dropdown"]'))
-    select_element.select_by_value(value=str(math_result))
+    answer_form = browser.find_element(value="answer")
+    answer_form.send_keys(math_result)
 
-    submit_button = browser.find_element(By.CSS_SELECTOR, '[class="btn btn-default"]')
+    robot_checkbox = browser.find_element(value="robotCheckbox")
+    browser.execute_script("return arguments[0].scrollIntoView(true);", robot_checkbox)
+    robot_checkbox.click()
+
+    robot_radiobutton = browser.find_element(value="robotsRule")
+    robot_radiobutton.click()
+
+    submit_button = browser.find_element(By.CLASS_NAME, "btn-primary")
     submit_button.click()
 
-
 finally:
-    # ожидание чтобы визуально оценить результаты прохождения скрипта
     time.sleep(10)
-    # закрываем браузер после всех манипуляций
-    if browser:
-        browser.quit()
+    browser.quit() if browser else ...
 
 
 
