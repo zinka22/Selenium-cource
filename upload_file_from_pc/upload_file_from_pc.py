@@ -1,4 +1,4 @@
-import math
+import os
 import time
 
 from selenium import webdriver
@@ -7,28 +7,25 @@ from selenium.webdriver.common.by import By
 browser = None
 
 
-def calc(x):
-    return str(math.log(abs(12 * math.sin(x))))
-
-
 try:
-    link = "https://SunInJuly.github.io/execute_script.html"
+    link = "http://suninjuly.github.io/file_input.html"
     browser = webdriver.Chrome()
     browser.get(link)
 
-    find_element_x = browser.find_element(value="input_value")
-    element_x_text = int(find_element_x.text)
-    math_result = calc(element_x_text)
+    field_name = browser.find_element(By.NAME, "firstname")
+    field_name.send_keys("Ivan")
 
-    answer_form = browser.find_element(value="answer")
-    answer_form.send_keys(math_result)
+    field_last_name = browser.find_element(By.NAME, "lastname")
+    field_last_name.send_keys("Ivanov")
 
-    robot_checkbox = browser.find_element(value="robotCheckbox")
-    browser.execute_script("return arguments[0].scrollIntoView(true);", robot_checkbox)
-    robot_checkbox.click()
+    field_email = browser.find_element(By.NAME, "email")
+    field_email.send_keys("Ivanov@mail.ru")
 
-    robot_radiobutton = browser.find_element(value="robotsRule")
-    robot_radiobutton.click()
+    current_dir = os.path.abspath(os.path.dirname(__file__))
+    file_path = os.path.join(current_dir, "test__file_for_uploading.txt")
+
+    choose_file_button = browser.find_element(By.NAME, "file")
+    choose_file_button.send_keys(file_path)
 
     submit_button = browser.find_element(By.CLASS_NAME, "btn-primary")
     submit_button.click()
