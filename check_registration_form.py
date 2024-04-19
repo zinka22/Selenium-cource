@@ -1,6 +1,7 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
 
 try:
     link = "http://suninjuly.github.io/registration1.html"
@@ -36,6 +37,3 @@ finally:
     time.sleep(10)
     # закрываем браузер после всех манипуляций
     browser.quit()
-
-    
-

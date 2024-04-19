@@ -1,8 +1,8 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 import math
 import time
 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 try:
     link = "https://suninjuly.github.io/selects1.html"
@@ -32,7 +32,3 @@ finally:
     time.sleep(10)
     # закрываем браузер после всех манипуляций
     browser.quit()
-
-
-
-
