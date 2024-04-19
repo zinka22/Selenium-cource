@@ -1,15 +1,11 @@
 import time
-from math import log, sin
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+from helpers import calc
+
 browser = None
-
-
-def calc(x):
-    return str(log(abs(12 * sin(int(x)))))
-
 
 try:
     link = "https://suninjuly.github.io/math.html"
