@@ -1,5 +1,5 @@
-import math
 import time
+from math import log, sin
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -14,7 +14,7 @@ try:
     chest_element = browser.find_element(By.CSS_SELECTOR, "[src='images/chest.png']")
     x = float(chest_element.get_attribute("valuex"))
 
-    result_function = math.log(abs(12 * math.sin(x)))
+    result_function = log(abs(12 * sin(x)))
 
     answer_field = browser.find_element(By.CSS_SELECTOR, "#answer")
     answer_field.send_keys(result_function)

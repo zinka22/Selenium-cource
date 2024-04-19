@@ -1,5 +1,5 @@
-import math
 import time
+from math import log, sin
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -8,7 +8,7 @@ browser = None
 
 
 def calc(x):
-    return str(math.log(abs(12 * math.sin(x))))
+    return str(log(abs(12 * sin(x))))
 
 
 try:
