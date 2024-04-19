@@ -3,6 +3,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+browser = None
+
 try:
     link = "http://suninjuly.github.io/registration2.html"
     browser = webdriver.Chrome()
@@ -42,4 +44,4 @@ finally:
     # ожидание чтобы визуально оценить результаты прохождения скрипта
     time.sleep(10)
     # закрываем браузер после всех манипуляций
-    browser.quit()
+    browser.quit() if browser else ...
