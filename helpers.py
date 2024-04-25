@@ -1,5 +1,5 @@
 from math import log, sin
 
 
-def calc(x):
-    return str(log(abs(12 * sin(int(x)))))
+def calculate_value(x: int):
+    return str(log(abs(12 * sin(x))))

@@ -1,14 +1,10 @@
 import time
-from math import log, sin
 
+from helpers import calculate_value
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 browser = None
-
-
-def calc(x):
-    return str(log(abs(12 * sin(x))))
 
 
 try:
@@ -17,8 +13,8 @@ try:
     browser.get(link)
 
     find_element_x = browser.find_element(value="input_value")
-    element_x_text = int(find_element_x.text)
-    math_result = calc(element_x_text)
+    element_x_int = int(find_element_x.text)
+    math_result = calculate_value(element_x_int)
 
     answer_form = browser.find_element(value="answer")
     answer_form.send_keys(math_result)
