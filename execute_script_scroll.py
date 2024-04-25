@@ -8,7 +8,7 @@ browser = None
 
 
 def calc(x):
-    return str(math.log(abs(12*math.sin(x))))
+    return str(math.log(abs(12 * math.sin(x))))
 
 
 try:
@@ -36,7 +36,3 @@ try:
 finally:
     time.sleep(10)
     browser.quit() if browser else ...
-
-
-
-
