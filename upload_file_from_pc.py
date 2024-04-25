@@ -1,15 +1,11 @@
-import math
 import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+from helpers import calc
+
 browser = None
-
-
-def calc(x):
-    return str(math.log(abs(12 * math.sin(x))))
-
 
 try:
     link = "https://SunInJuly.github.io/execute_script.html"
