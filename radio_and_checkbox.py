@@ -3,7 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from helpers import calc
+from helpers import solve_captcha
 
 browser = None
 
@@ -14,7 +14,7 @@ try:
 
     x_element = browser.find_element(By.CSS_SELECTOR, ".form-group #input_value")
     x = x_element.text
-    y = calc(x)
+    y = solve_captcha(x)
 
     input1 = browser.find_element(By.CSS_SELECTOR, "#answer.form-control")
     input1.send_keys(y)

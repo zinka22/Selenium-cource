@@ -1,6 +1,6 @@
 import time
 
-from helpers import calculate_value
+from helpers import solve_captcha
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -14,7 +14,7 @@ try:
 
     find_element_x = browser.find_element(value="input_value")
     element_x_int = int(find_element_x.text)
-    math_result = calculate_value(element_x_int)
+    math_result = solve_captcha(element_x_int)
 
     answer_form = browser.find_element(value="answer")
     answer_form.send_keys(math_result)
