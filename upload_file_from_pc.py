@@ -13,8 +13,8 @@ try:
     browser.get(link)
 
     find_element_x = browser.find_element(value="input_value")
-    element_x_text = int(find_element_x.text)
-    math_result = solve_math_expression_for_captcha(element_x_text)
+    element_x_int = int(find_element_x.text)
+    math_result = solve_math_expression_for_captcha(element_x_int)
 
     answer_form = browser.find_element(value="answer")
     answer_form.send_keys(math_result)
