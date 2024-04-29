@@ -1,7 +1,7 @@
 from math import log, sin
 
 
-def solve_captcha(number: int):
+def solve_math_expression_for_captcha(number: int):
     """Calculate math expression, which value
     will be used to solve captcha
     """
