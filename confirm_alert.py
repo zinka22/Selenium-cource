@@ -19,8 +19,8 @@ try:
     confirm.accept()
 
     find_element_x = browser.find_element(By.ID, "input_value")
-    element_x_text = int(find_element_x.text)
-    math_result = calc(element_x_text)
+    element_x_int = int(find_element_x.text)
+    math_result = calc(element_x_int)
 
     answer_form = browser.find_element(By.ID, "answer")
     answer_form.send_keys(math_result)
