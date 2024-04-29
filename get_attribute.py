@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 browser = None
 
 try:
-    link = "https://suninjuly.github.io/selects1.html"
+    link = "http://suninjuly.github.io/get_attribute.html"
     browser = webdriver.Chrome()
     browser.get(link)
 
