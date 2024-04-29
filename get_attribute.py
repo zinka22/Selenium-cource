@@ -1,8 +1,9 @@
 import time
-from math import log, sin
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+
+from helpers import solve_math_expression_for_captcha
 
 browser = None
 
@@ -14,7 +15,7 @@ try:
     chest_element = browser.find_element(By.CSS_SELECTOR, "[src='images/chest.png']")
     x = float(chest_element.get_attribute("valuex"))
 
-    result_function = log(abs(12 * sin(x)))
+    result_function = solve_math_expression_for_captcha(x)
 
     answer_field = browser.find_element(By.CSS_SELECTOR, "#answer")
     answer_field.send_keys(result_function)

@@ -3,7 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from helpers import solve_captcha
+from helpers import solve_math_expression_for_captcha
 
 browser = None
 
@@ -20,7 +20,7 @@ try:
 
     find_element_x = browser.find_element(By.ID, "input_value")
     element_x_text = int(find_element_x.text)
-    math_result = solve_captcha(element_x_text)
+    math_result = solve_math_expression_for_captcha(element_x_text)
 
     answer_form = browser.find_element(By.ID, "answer")
     answer_form.send_keys(math_result)
