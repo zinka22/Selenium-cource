@@ -8,7 +8,7 @@ from helpers import solve_math_expression_for_captcha
 browser = None
 
 try:
-    link = "https://suninjuly.github.io/selects1.html"
+    link = "http://suninjuly.github.io/get_attribute.html"
     browser = webdriver.Chrome()
     browser.get(link)
 
