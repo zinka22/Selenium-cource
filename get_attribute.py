@@ -1,21 +1,15 @@
-import time
-
-from selenium import webdriver
+import helpers
 from selenium.webdriver.common.by import By
 
-from helpers import solve_math_expression_for_captcha
-
 browser = None
-
 try:
     link = "http://suninjuly.github.io/get_attribute.html"
-    browser = webdriver.Chrome()
-    browser.get(link)
+    browser = helpers.open_browser_page(link)
 
     chest_element = browser.find_element(By.CSS_SELECTOR, "[src='images/chest.png']")
     x = float(chest_element.get_attribute("valuex"))
 
-    result_function = solve_math_expression_for_captcha(x)
+    result_function = helpers.solve_math_expression_for_captcha(x)
 
     answer_field = browser.find_element(By.CSS_SELECTOR, "#answer")
     answer_field.send_keys(result_function)
@@ -31,7 +25,4 @@ try:
 
 
 finally:
-    # ожидание чтобы визуально оценить результаты прохождения скрипта
-    time.sleep(10)
-    # закрываем браузер после всех манипуляций
-    browser.quit() if browser else ...
+    helpers.wait_ten_seconds_and_close(browser) if browser else ...
