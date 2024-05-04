@@ -1,5 +1,6 @@
-import helpers
 from selenium.webdriver.common.by import By
+
+import helpers
 
 browser = None
 try:
@@ -25,4 +26,4 @@ try:
 
 
 finally:
-    helpers.wait_ten_seconds_and_close(browser) if browser else ...
+    helpers.wait_ten_seconds_and_close(browser)

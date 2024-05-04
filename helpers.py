@@ -25,4 +25,4 @@ def wait_ten_seconds_and_close(browser):
     then quit browser with opened page/pages
     """
     time.sleep(10)
-    browser.quit()
+    browser.quit() if browser else ...
