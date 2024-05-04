@@ -1,6 +1,6 @@
-import helpers
-
 from selenium.webdriver.common.by import By
+
+import helpers
 
 browser = None
 try:
