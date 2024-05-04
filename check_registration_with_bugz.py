@@ -1,14 +1,13 @@
-import time
+from time import sleep
 
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-browser = None
+import helpers
 
+browser = None
 try:
     link = "http://suninjuly.github.io/registration2.html"
-    browser = webdriver.Chrome()
-    browser.get(link)
+    browser = helpers.open_browser_page(link)
 
     # Ваш код, который заполняет обязательные поля
     input1 = browser.find_element(
@@ -30,7 +29,7 @@ try:
 
     # Проверяем, что смогли зарегистрироваться
     # ждем загрузки страницы
-    time.sleep(1)
+    sleep(1)
 
     # находим элемент, содержащий текст
     welcome_text_elt = browser.find_element(By.TAG_NAME, "h1")
@@ -41,7 +40,4 @@ try:
     assert "Congratulations! You have successfully registered!" == welcome_text
 
 finally:
-    # ожидание чтобы визуально оценить результаты прохождения скрипта
-    time.sleep(10)
-    # закрываем браузер после всех манипуляций
-    browser.quit() if browser else ...
+    helpers.wait_ten_seconds_and_close(browser)

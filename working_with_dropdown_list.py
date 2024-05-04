@@ -1,15 +1,12 @@
-import time
-
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
-browser = None
+import helpers
 
+browser = None
 try:
     link = "https://suninjuly.github.io/selects1.html"
-    browser = webdriver.Chrome()
-    browser.get(link)
+    browser = helpers.open_browser_page(link)
 
     first_number = browser.find_element(value="num1")
     first = first_number.text
@@ -24,7 +21,4 @@ try:
     submit_button.click()
 
 finally:
-    # ожидание чтобы визуально оценить результаты прохождения скрипта
-    time.sleep(10)
-    # закрываем браузер после всех манипуляций
-    browser.quit() if browser else ...
+    helpers.wait_ten_seconds_and_close(browser)
