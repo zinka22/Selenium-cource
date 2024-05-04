@@ -24,5 +24,6 @@ def wait_ten_seconds_and_close(browser):
     """Make wait for ten seconds,
     then quit browser with opened page/pages
     """
-    time.sleep(10)
-    browser.quit() if browser else ...
+    if browser:
+        time.sleep(10)
+        browser.quit()
