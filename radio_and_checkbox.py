@@ -4,11 +4,10 @@ import helpers
 
 browser = None
 try:
-    link = "https://suninjuly.github.io/math.html"
-    browser = helpers.open_browser_page(link)
+    browser = helpers.open_browser_page(link="https://suninjuly.github.io/math.html")
 
     x_element = browser.find_element(By.CSS_SELECTOR, ".form-group #input_value")
-    x = int(x_element.text)
+    x = x_element.text
     y = helpers.solve_math_expression_for_captcha(x)
 
     input1 = browser.find_element(By.CSS_SELECTOR, "#answer.form-control")

@@ -5,8 +5,9 @@ import helpers
 
 browser = None
 try:
-    link = "https://suninjuly.github.io/selects1.html"
-    browser = helpers.open_browser_page(link)
+    browser = helpers.open_browser_page(
+        link="https://suninjuly.github.io/selects1.html"
+    )
 
     first_number = browser.find_element(value="num1")
     first = first_number.text

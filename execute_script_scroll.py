@@ -4,8 +4,9 @@ import helpers
 
 browser = None
 try:
-    link = "https://SunInJuly.github.io/execute_script.html"
-    browser = helpers.open_browser_page(link)
+    browser = helpers.open_browser_page(
+        link="https://SunInJuly.github.io/execute_script.html"
+    )
 
     find_element_x = browser.find_element(value="input_value")
     element_x_int = int(find_element_x.text)

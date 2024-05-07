@@ -4,8 +4,9 @@ import helpers
 
 browser = None
 try:
-    link = "http://suninjuly.github.io/huge_form.html"
-    browser = helpers.open_browser_page(link)
+    browser = helpers.open_browser_page(
+        link="http://suninjuly.github.io/huge_form.html"
+    )
 
     elements = browser.find_elements(By.TAG_NAME, "input")
     for element in elements:
