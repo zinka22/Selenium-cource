@@ -1,21 +1,16 @@
-import time
-
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from helpers import solve_math_expression_for_captcha
+import helpers
 
 browser = None
-
-
 try:
-    link = "https://SunInJuly.github.io/execute_script.html"
-    browser = webdriver.Chrome()
-    browser.get(link)
+    browser = helpers.open_browser_page(
+        link="https://SunInJuly.github.io/execute_script.html"
+    )
 
     find_element_x = browser.find_element(value="input_value")
     element_x_int = int(find_element_x.text)
-    math_result = solve_math_expression_for_captcha(element_x_int)
+    math_result = helpers.solve_math_expression_for_captcha(element_x_int)
 
     answer_form = browser.find_element(value="answer")
     answer_form.send_keys(math_result)
@@ -31,5 +26,4 @@ try:
     submit_button.click()
 
 finally:
-    time.sleep(10)
-    browser.quit() if browser else ...
+    helpers.wait_ten_seconds_and_close(browser)

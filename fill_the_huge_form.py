@@ -1,13 +1,13 @@
-import time
-
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-browser = None
+import helpers
 
+browser = None
 try:
-    browser = webdriver.Chrome()
-    browser.get("http://suninjuly.github.io/huge_form.html")
+    browser = helpers.open_browser_page(
+        link="http://suninjuly.github.io/huge_form.html"
+    )
+
     elements = browser.find_elements(By.TAG_NAME, "input")
     for element in elements:
         element.send_keys("Наташа Умница")
@@ -16,9 +16,4 @@ try:
     button.click()
 
 finally:
-    # успеваем скопировать код за 30 секунд
-    time.sleep(30)
-    # закрываем браузер после всех манипуляций
-    browser.quit() if browser else ...
-
-# не забываем оставить пустую строку в конце файла
+    helpers.wait_ten_seconds_and_close(browser)

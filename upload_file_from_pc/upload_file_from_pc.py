@@ -1,16 +1,14 @@
 import os
-import time
 
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+import helpers
+
 browser = None
-
-
 try:
-    link = "http://suninjuly.github.io/file_input.html"
-    browser = webdriver.Chrome()
-    browser.get(link)
+    browser = helpers.open_browser_page(
+        link="http://suninjuly.github.io/file_input.html"
+    )
 
     field_name = browser.find_element(By.NAME, "firstname")
     field_name.send_keys("Ivan")
@@ -31,5 +29,4 @@ try:
     submit_button.click()
 
 finally:
-    time.sleep(10)
-    browser.quit() if browser else ...
+    helpers.wait_ten_seconds_and_close(browser)
