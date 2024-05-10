@@ -4,7 +4,6 @@ import helpers
 
 browser = None
 try:
-<<<<<<< HEAD
     browser = helpers.open_browser_page(link="https://suninjuly.github.io/math.html")
 
     x_element = browser.find_element(By.CSS_SELECTOR, ".form-group #input_value")
