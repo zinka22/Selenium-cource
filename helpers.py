@@ -27,4 +27,3 @@ def wait_ten_seconds_and_close(browser):
     if browser:
         time.sleep(10)
         browser.quit()
-

@@ -7,6 +7,7 @@ try:
     browser = helpers.open_browser_page(
         link="http://suninjuly.github.io/get_attribute.html"
     )
+
     chest_element = browser.find_element(By.CSS_SELECTOR, "[src='images/chest.png']")
     x = float(chest_element.get_attribute("valuex"))
 
@@ -23,5 +24,6 @@ try:
 
     submit_button = browser.find_element(By.CSS_SELECTOR, "[class='btn btn-default']")
     submit_button.click()
+
 finally:
     helpers.wait_ten_seconds_and_close(browser)

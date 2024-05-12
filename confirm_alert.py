@@ -7,6 +7,7 @@ try:
     browser = helpers.open_browser_page(
         link="http://suninjuly.github.io/alert_accept.html"
     )
+
     magic_button = browser.find_element(By.CLASS_NAME, "btn-primary")
     magic_button.click()
 

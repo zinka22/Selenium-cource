@@ -7,6 +7,7 @@ try:
     browser = helpers.open_browser_page(
         link="http://suninjuly.github.io/find_xpath_form"
     )
+
     elements = browser.find_elements(By.TAG_NAME, "input")
     for element in elements:
         element.send_keys("Наташа Умница")
