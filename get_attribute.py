@@ -25,5 +25,6 @@ try:
     submit_button = browser.find_element(By.CSS_SELECTOR, "[class='btn btn-default']")
     submit_button.click()
 
+
 finally:
     helpers.wait_ten_seconds_and_close(browser)
