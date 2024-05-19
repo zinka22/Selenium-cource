@@ -24,3 +24,5 @@ try:
 
 finally:
     helpers.wait_ten_seconds_and_close(browser)
+
+# [ссылка на файл](../tasks/for_test_link.md)
