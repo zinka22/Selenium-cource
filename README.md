@@ -18,10 +18,12 @@ upload_file_from_pc  https://stepik.org/lesson/228249/step/8?unit=200781
 
 confirm_alert.py  https://stepik.org/lesson/184253/step/4?unit=158843
 
-switch_to_window.py https://stepik.org/lesson/184253/step/6?unit=158843
 
 Локально курс по Selenium собран в папку Selenium-cource, внутри проекта не настроено окружение.
 Запуск из консоли selenium_env\Scripts\activate.bat, далее работа в venv
+----------
+Ниже представлена таблица, в каждой строке которой связаны задача из репозитория и ссылка на задание, на основании которого была выполена задача.
 
-
-
+ссылка на текст задачи|ссылка на реализацию
+:-:|:-:
+[task_for_switch_to_window](task_for_switch_to_window.md)|[switch_to_window](../switch_to_window.py)

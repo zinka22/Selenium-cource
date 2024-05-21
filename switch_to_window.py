@@ -1,3 +1,5 @@
+# Задание содержится в tasks/task_for_switch_to_window.md
+
 from selenium.webdriver.common.by import By
 
 import helpers
@@ -24,5 +26,3 @@ try:
 
 finally:
     helpers.wait_ten_seconds_and_close(browser)
-
-# [ссылка на файл](../tasks/for_test_link.md)
