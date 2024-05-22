@@ -1,4 +1,4 @@
-# Задание содержится в tasks/task_for_switch_to_window.md
+# Задание содержится в tasks/switch_to_window.md
 
 from selenium.webdriver.common.by import By
 
