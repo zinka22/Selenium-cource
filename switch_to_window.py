@@ -1,3 +1,5 @@
+# Задание содержится в tasks/switch_to_window.md
+
 from selenium.webdriver.common.by import By
 
 import helpers
