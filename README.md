@@ -2,7 +2,8 @@
 
 |                       Описание                        |               Реализация                |
 |:-----------------------------------------------------:|:---------------------------------------:|
-| [Переход на новую вкладку](tasks/switch_to_window.md) | [switch_to_window](switch_to_window.py) |
+| [Переход на новую вкладку](tasks/switch_to_window.md) | [switch_to_window](solutions/switch_to_window.py) |
+| [Принимаем alert](tasks/confirm_alert.md) | [confirm_alert](solutions/confirm_alert.py) |
 
 ---
 fill_the_huge_form.py https://stepik.org/lesson/138920/step/7?unit=196194
@@ -23,7 +24,6 @@ execute_script_scroll https://stepik.org/lesson/228249/step/6?unit=200781
 
 upload_file_from_pc  https://stepik.org/lesson/228249/step/8?unit=200781
 
-confirm_alert.py  https://stepik.org/lesson/184253/step/4?unit=158843
 
 Локально курс по Selenium собран в папку Selenium-cource, внутри проекта не настроено окружение.
 Запуск из консоли selenium_env\Scripts\activate.bat, далее работа в venv
