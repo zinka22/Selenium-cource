@@ -1,4 +1,4 @@
-## Задание к [confirm_alert](../solutions/confirm_alert.py)
+## Задание к [confirm_alert](../confirm_alert.py)
 
 ### Принимаем alert
  

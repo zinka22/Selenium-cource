@@ -2,7 +2,7 @@ import os
 
 from selenium.webdriver.common.by import By
 
-from solutions import helpers
+import helpers
 
 browser = None
 try:

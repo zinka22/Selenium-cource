@@ -1,4 +1,4 @@
-## Задание к [switch_to_window](../solutions/switch_to_window.py)
+## Задание к [switch_to_window](../switch_to_window.py)
 
 ### Переход на новую вкладку
 
