@@ -2,8 +2,8 @@
 
 |                       Описание                        |               Реализация                |
 |:-----------------------------------------------------:|:---------------------------------------:|
-| [Переход на новую вкладку](tasks/switch_to_window.md) | [switch_to_window](switch_to_window.py) |
-| [Принимаем alert](tasks/confirm_alert.md) | [confirm_alert](confirm_alert.py) |
+| [Переходим на новую вкладку](tasks/switch_to_window.md) | [switch_to_window](solutions/switch_to_window.py) |
+| [Принимаем alert](tasks/confirm_alert.md) | [confirm_alert](solutions/confirm_alert.py) |
 
 ---
 fill_the_huge_form.py https://stepik.org/lesson/138920/step/7?unit=196194
