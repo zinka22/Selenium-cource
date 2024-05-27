@@ -2,7 +2,7 @@
 
 |                       Описание                        |                  Реализация                   |
 |:-----------------------------------------------------:|:---------------------------------------------:|
-|  [Настройка ожиданий](tasks/expected_conditions.md)   | [expected_conditions](expected_conditions.py) |
+|  [Настройка ожиданий](tasks/expected_conditions.md)   | [expected_conditions](solutions/expected_conditions.py) |
 | [Переход на новую вкладку](tasks/switch_to_window.md) |    [switch_to_window](switch_to_window.py)    |
 
 ---

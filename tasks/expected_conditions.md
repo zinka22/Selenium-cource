@@ -1,4 +1,4 @@
-## Задание к [expected_conditions](../expected_conditions.py)
+## Задание к [expected_conditions](../solutions/expected_conditions.py)
 
 ### Настройка ожиданий
 
