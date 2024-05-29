@@ -5,11 +5,12 @@ import subprocess
 
 import pytest
 
-from check_registration_form import check_registration_form
-
 
 def test_check_registration_form_link1():
-    check_registration_form()
+    result = subprocess.run(["python", "check_registration_form.py"])
+
+    if result.returncode != 0:
+        pytest.fail()
 
 
 def test_check_registration_form_link2():
