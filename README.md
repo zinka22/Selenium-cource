@@ -1,8 +1,9 @@
 # Упражнения по Selenium
 
-|                         Описание                         |                 Реализация                  |
-|:--------------------------------------------------------:|:-------------------------------------------:|
-|  [Переход на новую вкладку](tasks/switch_to_window.md)   |   [switch_to_window](switch_to_window.py)   |
+|                       Описание                        |                       Реализация                        |
+|:-----------------------------------------------------:|:-------------------------------------------------------:|
+|  [Настройка ожиданий](tasks/expected_conditions.md)   | [expected_conditions](solutions/expected_conditions.py) |
+| [Переход на новую вкладку](tasks/switch_to_window.md) |         [switch_to_window](switch_to_window.py)         |
 | [Подтверждение действия в alert](tasks/confirm_alert.md) | [confirm_alert](solutions/confirm_alert.py) |
 
 ---
