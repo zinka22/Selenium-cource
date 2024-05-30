@@ -1,11 +1,20 @@
 # Задание содержится в tasks/pytest_style.md
 
-from helpers import run_py_file
+
+import subprocess
+
+import pytest
 
 
 def test_check_registration_form_link1():
-    run_py_file("check_registration_form.py")
+    result = subprocess.run(["python", "check_registration_form.py"])
+
+    if result.returncode != 0:
+        pytest.fail()
 
 
 def test_check_registration_form_link2():
-    run_py_file("check_registration_with_bugz.py")
+    result = subprocess.run(["python", "check_registration_with_bugz.py"])
+
+    if result.returncode != 0:
+        pytest.fail()

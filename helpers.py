@@ -1,6 +1,5 @@
 import time
 from math import log, sin
-from pathlib import Path
 
 from selenium import webdriver
 
@@ -19,11 +18,6 @@ def open_browser_page(link):
     browser = webdriver.Chrome()
     browser.get(link)
     return browser
-
-
-def run_py_file(filename: str):
-    """Execute the given source of python code."""
-    exec(Path(filename).read_bytes()) if filename.endswith(".py") else ...
 
 
 def wait_ten_seconds_and_close(browser):
