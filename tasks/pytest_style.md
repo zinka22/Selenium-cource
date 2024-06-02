@@ -2,7 +2,7 @@
 
 ### вывод PyTest
 
-Попробуйте запустить ваши тесты из урока 3.2 ([check_registration_form](../check_registration_form.py),
+Попробуйте запустить ваши тесты ([check_registration_form](../check_registration_form.py),
 [check_registration_with_bugz](../check_registration_with_bugz.py))
 с помощью PyTest. В выводе найдите последнюю строку, скопируйте её и отправьте в это задание. Отправьте текст, который
 находится между === и ===.
