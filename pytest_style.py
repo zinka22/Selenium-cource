@@ -13,7 +13,7 @@ def test_check_registration_form_link1():
         pytest.fail()
 
 
-def test_check_registration_form_link2():
+def test_check_registration_with_bugs():
     result = subprocess.run(["python", "check_registration_with_bugz.py"])
 
     if result.returncode != 0:
