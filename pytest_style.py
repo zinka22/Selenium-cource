@@ -6,7 +6,7 @@ import subprocess
 import pytest
 
 
-def test_check_registration_form_link1():
+def test_check_registration_form():
     result = subprocess.run(["python", "check_registration_form.py"])
 
     if result.returncode != 0:
