@@ -2,7 +2,7 @@
 
 |                       Описание                        |               Реализация                |
 |:-----------------------------------------------------:|:---------------------------------------:|
-| [Вывод PyTest](tasks/pytest_style.md) | [pytest_style](pytest_style.py)|
+|         [Вывод PyTest](tasks/pytest_style.md)         |     [pytest_style](pytest_style.py)     |
 | [Переход на новую вкладку](tasks/switch_to_window.md) | [switch_to_window](switch_to_window.py) |
 
 ---
