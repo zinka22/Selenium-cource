@@ -1,5 +1,4 @@
 # Задание содержится в tasks/pytest_style.md
-
 import subprocess
 
 import pytest
