@@ -1,6 +1,6 @@
 ## Задание к [pytest_style](../pytest_style.py)
 
-### вывод PyTest
+### Вывод pytest
 
 Попробуйте запустить ваши тесты ([check_registration_form](../check_registration_form.py),
 [check_registration_with_bugz](../check_registration_with_bugz.py))
