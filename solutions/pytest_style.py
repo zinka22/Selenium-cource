@@ -3,7 +3,7 @@
 from runpy import run_path
 
 
-def test_check_registration_form_link1():
+def test_check_registration_form():
     run_path("check_registration_form.py")
 
 
