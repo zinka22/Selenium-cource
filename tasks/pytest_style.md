@@ -1,4 +1,4 @@
-## Задание к [pytest_style](../pytest_style.py)
+## Задание к [pytest_style](../solutions/pytest_style.py)
 
 ### Вывод pytest
 
