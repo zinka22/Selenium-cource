@@ -4,7 +4,7 @@
 |:-----------------------------------------------------:|:-------------------------------------------------------:|
 |  [Настройка ожиданий](tasks/expected_conditions.md)   | [expected_conditions](solutions/expected_conditions.py) |
 |         [Вывод pytest](tasks/pytest_style.md)         |     [pytest_style](pytest_style.py)     |
-| [Переход на новую вкладку](tasks/switch_to_window.md) |         [switch_to_window](switch_to_window.py)         |
+| [Переход на новую вкладку](tasks/switch_to_window.md) |    [switch_to_window](solutions/switch_to_window.py)    |
 
 ---
 fill_the_huge_form.py https://stepik.org/lesson/138920/step/7?unit=196194
