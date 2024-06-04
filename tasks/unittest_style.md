@@ -1,4 +1,4 @@
-## Задание к [unittest_style](../unittest_style.py)
+## Задание к [unittest_style](../solutions/unittest_style.py)
 
 ### оформляем тесты в стиле unittest
 
