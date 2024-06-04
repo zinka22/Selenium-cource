@@ -4,7 +4,7 @@
 |:--------------------------------------------------------:|:-------------------------------------------------------:|
 | [Подтверждение действия в alert](tasks/confirm_alert.md) |       [confirm_alert](solutions/confirm_alert.py)       |
 |    [Настройка ожиданий](tasks/expected_conditions.md)    | [expected_conditions](solutions/expected_conditions.py) |
-|         [Вывод pytest](tasks/pytest_style.md)         |        [pytest_style](solutions/pytest_style.py)           |
+|          [Вывод pytest](tasks/pytest_style.md)           |        [pytest_style](solutions/pytest_style.py)        |
 |  [Переход на новую вкладку](tasks/switch_to_window.md)   |    [switch_to_window](solutions/switch_to_window.py)    |
 
 ---
