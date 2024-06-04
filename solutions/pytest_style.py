@@ -7,5 +7,5 @@ def test_check_registration_form_link1():
     run_path("check_registration_form.py")
 
 
-def test_check_registration_form_link2():
+def test_check_registration_with_bugs():
     run_path("check_registration_with_bugz.py")
