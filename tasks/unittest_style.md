@@ -1,6 +1,6 @@
 ## Задание к [unittest_style](../solutions/unittest_style.py)
 
-### оформляем тесты в стиле unittest
+### Оформление тестов в стиле unittest
 
 Попробуйте оформить тесты из первого модуля в стиле unittest. Для этого:
 
