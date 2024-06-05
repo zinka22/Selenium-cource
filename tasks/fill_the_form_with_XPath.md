@@ -1,4 +1,4 @@
-## Задание к [fill_the_form_with_XPath](../fill_the_form_with_XPath.py)
+## Задание к [fill_the_form_with_XPath](../solutions/fill_the_form_with_XPath.py)
 
 ### Поиск элемента по XPath
 
