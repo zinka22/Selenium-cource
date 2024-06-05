@@ -1,3 +1,5 @@
+# Задание содержится в tasks/working_with_dropdown_list.md
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
