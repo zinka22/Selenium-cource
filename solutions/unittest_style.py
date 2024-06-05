@@ -34,9 +34,9 @@ class TestAbs(unittest.TestCase):
             sleep(1)
 
             # находим элемент, содержащий текст
-            welcome_text_elt = browser.find_element(By.TAG_NAME, "h1")
-            # записываем в переменную welcome_text текст из элемента welcome_text_elt
-            welcome_text = welcome_text_elt.text
+            welcome_text_element = browser.find_element(By.TAG_NAME, "h1")
+            # записываем в переменную welcome_text текст из элемента welcome_text_element
+            welcome_text = welcome_text_element.text
 
             self.assertEqual(
                 "Congratulations! You have successfully registered!",
@@ -77,9 +77,9 @@ class TestAbs(unittest.TestCase):
             sleep(1)
 
             # находим элемент, содержащий текст
-            welcome_text_elt = browser.find_element(By.TAG_NAME, "h1")
-            # записываем в переменную welcome_text текст из элемента welcome_text_elt
-            welcome_text = welcome_text_elt.text
+            welcome_text_element = browser.find_element(By.TAG_NAME, "h1")
+            # записываем в переменную welcome_text текст из элемента welcome_text_element
+            welcome_text = welcome_text_element.text
 
             # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
             self.assertEqual(
@@ -94,4 +94,3 @@ class TestAbs(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
