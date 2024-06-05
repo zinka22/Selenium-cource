@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
 import helpers
@@ -29,7 +29,7 @@ try:
     button.click()
 
     welcome_text_elt = WebDriverWait(browser, 15).until(
-        EC.presence_of_element_located((By.TAG_NAME, "h1"))
+        ec.presence_of_element_located((By.TAG_NAME, "h1"))
     )
     # записываем в переменную welcome_text текст из элемента welcome_text_elt
     welcome_text = welcome_text_elt.text
