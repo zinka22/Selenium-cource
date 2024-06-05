@@ -37,6 +37,8 @@ class TestAbs(unittest.TestCase):
             "Welcome text should be 'Congratulations! You have successfully registered!'",
         )
 
+        browser.quit()
+
     def test_check_registration_with_bugs(self):
         browser = helpers.open_browser_page(
             link="http://suninjuly.github.io/registration2.html"
@@ -69,6 +71,8 @@ class TestAbs(unittest.TestCase):
             welcome_text,
             "Welcome text should be 'Congratulations! You have successfully registered!'",
         )
+
+        browser.quit()
 
 
 if __name__ == "__main__":
