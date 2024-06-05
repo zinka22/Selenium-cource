@@ -10,19 +10,18 @@ import helpers
 
 class TestAbs(unittest.TestCase):
     def test_check_registration_form(self):
-
         browser = None
         browser = helpers.open_browser_page(
             link="http://suninjuly.github.io/registration1.html"
         )
 
         # Ваш код, который заполняет обязательные поля
-        input1 = browser.find_element(By.CLASS_NAME, "form-control.first")
-        input1.send_keys("Ivan")
-        input2 = browser.find_element(By.CLASS_NAME, "form-control.second")
-        input2.send_keys("Petrov")
-        input3 = browser.find_element(By.CLASS_NAME, "form-control.third")
-        input3.send_keys("nn@mailto.plus")
+        input_name = browser.find_element(By.CLASS_NAME, "form-control.first")
+        input_name.send_keys("Ivan")
+        input_surname = browser.find_element(By.CLASS_NAME, "form-control.second")
+        input_surname.send_keys("Petrov")
+        input_email = browser.find_element(By.CLASS_NAME, "form-control.third")
+        input_email.send_keys("nn@mailto.plus")
 
         # Отправляем заполненную форму
         button = browser.find_element(By.CSS_SELECTOR, "button.btn")
@@ -50,18 +49,18 @@ class TestAbs(unittest.TestCase):
         )
 
         # Ваш код, который заполняет обязательные поля
-        input1 = browser.find_element(
+        input_name = browser.find_element(
             By.CSS_SELECTOR, '[class="form-control first"]:required'
         )
-        input1.send_keys("Ivan")
-        input2 = browser.find_element(
+        input_name.send_keys("Ivan")
+        input_surname = browser.find_element(
             By.CSS_SELECTOR, '[class="form-control second"]:required'
         )
-        input2.send_keys("Petrov")
-        input3 = browser.find_element(
+        input_surname.send_keys("Petrov")
+        input_email = browser.find_element(
             By.CSS_SELECTOR, '[class="form-control third"]:required'
         )
-        input3.send_keys("nn@mailto.plus")
+        input_email.send_keys("nn@mailto.plus")
 
         # Отправляем заполненную форму
         button = browser.find_element(By.CSS_SELECTOR, "button.btn")
