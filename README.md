@@ -1,11 +1,12 @@
 # Упражнения по Selenium
 
-|                         Описание                         |                       Реализация                        |
-|:--------------------------------------------------------:|:-------------------------------------------------------:|
-| [Подтверждение действия в alert](tasks/confirm_alert.md) |       [confirm_alert](solutions/confirm_alert.py)       |
-|    [Настройка ожиданий](tasks/expected_conditions.md)    | [expected_conditions](solutions/expected_conditions.py) |
-|          [Вывод pytest](tasks/pytest_style.md)           |        [pytest_style](solutions/pytest_style.py)        |
-|  [Переход на новую вкладку](tasks/switch_to_window.md)   |    [switch_to_window](solutions/switch_to_window.py)    |
+|                           Описание                           |                            Реализация                             |
+|:------------------------------------------------------------:|:-----------------------------------------------------------------:|
+|   [Подтверждение действия в alert](tasks/confirm_alert.md)   |            [confirm_alert](solutions/confirm_alert.py)            |
+|      [Настройка ожиданий](tasks/expected_conditions.md)      |      [expected_conditions](solutions/expected_conditions.py)      |
+| [Поиск элемента по XPath](tasks/fill_the_form_with_XPath.md) | [fill_the_form_with_XPath](solutions/fill_the_form_with_XPath.py) |
+|            [Вывод pytest](tasks/pytest_style.md)             |             [pytest_style](solutions/pytest_style.py)             |
+|    [Переход на новую вкладку](tasks/switch_to_window.md)     |         [switch_to_window](solutions/switch_to_window.py)         |
 
 ---
 fill_the_huge_form.py https://stepik.org/lesson/138920/step/7?unit=196194
