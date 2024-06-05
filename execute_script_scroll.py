@@ -9,7 +9,7 @@ try:
     )
 
     input_value = int(browser.find_element(value="input_value").text)
-    function_value = helpers.solve_math_expression_for_captcha(input_value)
+    function_value = helpers.get_math_function_value(input_value)
 
     answer_form = browser.find_element(value="answer")
     answer_form.send_keys(function_value)

@@ -11,7 +11,7 @@ try:
     chest_element = browser.find_element(By.CSS_SELECTOR, "[src='images/chest.png']")
     input_value = int(chest_element.get_attribute("valuex"))
 
-    function_value = helpers.solve_math_expression_for_captcha(input_value)
+    function_value = helpers.get_math_function_value(input_value)
 
     answer_field = browser.find_element(By.CSS_SELECTOR, "#answer")
     answer_field.send_keys(function_value)
