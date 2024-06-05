@@ -5,7 +5,7 @@
 Попробуйте оформить тесты из первого модуля в стиле unittest. Для этого:
 
 1) возьмите тесты из [check_registration_form](../check_registration_form.py) и
-   [check_registration_with_bugz](check_registration_with_bugz.py);
+   [check_registration_with_bugs](../check_registration_with_bugz.py);
 2) cоздайте новый файл;
 3) cоздайте в нем класс с тестами, который должен наследоваться от unittest.TestCase по аналогии с предыдущим шагом;
 4) перепишите в стиле unittest тест для страницы http://suninjuly.github.io/registration1.html;
