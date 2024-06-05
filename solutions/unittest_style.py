@@ -11,7 +11,6 @@ import helpers
 
 class TestAbs(unittest.TestCase):
     def test_check_registration_form(self):
-        browser = None
         browser = helpers.open_browser_page(
             link="http://suninjuly.github.io/registration1.html"
         )
@@ -42,7 +41,6 @@ class TestAbs(unittest.TestCase):
         )
 
     def test_check_registration_with_bugs(self):
-        browser = None
         browser = helpers.open_browser_page(
             link="http://suninjuly.github.io/registration2.html"
         )
