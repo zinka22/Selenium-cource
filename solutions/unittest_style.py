@@ -24,8 +24,8 @@ class TestAbs(unittest.TestCase):
         input_email.send_keys("nn@mailto.plus")
 
         # Отправляем заполненную форму
-        button = browser.find_element(By.CSS_SELECTOR, "button.btn")
-        button.click()
+        submit_button = browser.find_element(By.CSS_SELECTOR, "button.btn")
+        submit_button.click()
 
         welcome_text_element = WebDriverWait(browser, 15).until(
             ec.presence_of_element_located((By.TAG_NAME, "h1"))
@@ -60,8 +60,8 @@ class TestAbs(unittest.TestCase):
         input_email.send_keys("nn@mailto.plus")
 
         # Отправляем заполненную форму
-        button = browser.find_element(By.CSS_SELECTOR, "button.btn")
-        button.click()
+        submit_button = browser.find_element(By.CSS_SELECTOR, "button.btn")
+        submit_button.click()
 
         welcome_text_element = WebDriverWait(browser, 15).until(
             ec.presence_of_element_located((By.TAG_NAME, "h1"))
