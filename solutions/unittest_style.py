@@ -12,7 +12,6 @@ class TestAbs(unittest.TestCase):
     def test_check_registration_form(self):
 
         browser = None
-        try:
             browser = helpers.open_browser_page(
                 link="http://suninjuly.github.io/registration1.html"
             )
@@ -47,9 +46,8 @@ class TestAbs(unittest.TestCase):
         finally:
             helpers.wait_ten_seconds_and_close(browser)
 
-    def test_check_registration_with_bugz(self):
+    def test_check_registration_with_bugs(self):
         browser = None
-        try:
             browser = helpers.open_browser_page(
                 link="http://suninjuly.github.io/registration2.html"
             )

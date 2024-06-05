@@ -1,13 +1,13 @@
 ## Задание к [unittest_style](../solutions/unittest_style.py)
 
-### оформляем тесты в стиле unittest
+### Оформление тестов в стиле unittest
 
 Попробуйте оформить тесты из первого модуля в стиле unittest. Для этого:
 
-1) возьмите тесты из [check_registration_form](check_registration_form.py) и
-   [check_registration_with_bugz](check_registration_with_bugz.py);
-2) cоздайте новый файл;
-3) cоздайте в нем класс с тестами, который должен наследоваться от unittest.TestCase по аналогии с предыдущим шагом;
+1) возьмите тесты из [check_registration_form](../check_registration_form.py) и
+   [check_registration_with_bugs](../check_registration_with_bugz.py);
+2) создайте новый файл;
+3) создайте в нем класс с тестами, который должен наследоваться от `unittest.TestCase` по аналогии с предыдущим шагом;
 4) перепишите в стиле unittest тест для страницы http://suninjuly.github.io/registration1.html;
 5) перепишите в стиле unittest второй тест для страницы http://suninjuly.github.io/registration2.html;
 6) оформите финальные проверки в тестах в стиле unittest, например, используя проверочный метод assertEqual;
