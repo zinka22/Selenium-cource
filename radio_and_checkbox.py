@@ -6,12 +6,13 @@ browser = None
 try:
     browser = helpers.open_browser_page(link="https://suninjuly.github.io/math.html")
 
-    x_element = browser.find_element(By.CSS_SELECTOR, ".form-group #input_value")
-    x = x_element.text
-    y = helpers.solve_math_expression_for_captcha(x)
+    input_value = int(
+        browser.find_element(By.CSS_SELECTOR, ".form-group #input_value").text
+    )
+    function_value = helpers.solve_math_expression_for_captcha(input_value)
 
     input1 = browser.find_element(By.CSS_SELECTOR, "#answer.form-control")
-    input1.send_keys(y)
+    input1.send_keys(function_value)
 
     checkbox = browser.find_element(By.CSS_SELECTOR, "[for='robotCheckbox']")
     checkbox.click()
