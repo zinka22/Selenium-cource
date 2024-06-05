@@ -14,12 +14,11 @@ try:
 
     browser.switch_to.window(browser.window_handles[1])
 
-    input_value = browser.find_element(By.ID, "input_value")
-    element_x_int = int(input_value.text)
-    math_result = helpers.solve_math_expression_for_captcha(element_x_int)
+    input_value = int(browser.find_element(By.ID, "input_value").text)
+    function_value = helpers.solve_math_expression_for_captcha(input_value)
 
     answer_form = browser.find_element(By.ID, "answer")
-    answer_form.send_keys(math_result)
+    answer_form.send_keys(function_value)
 
     submit_button = browser.find_element(By.CLASS_NAME, "btn-primary")
     submit_button.click()
