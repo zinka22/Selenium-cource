@@ -13,8 +13,6 @@ fill_the_huge_form.py https://stepik.org/lesson/138920/step/7?unit=196194
 
 working with drop-down list.py     https://stepik.org/lesson/228249/step/3?unit=200781
 
-fill_the_form_with_XPath.py https://stepik.org/lesson/138920/step/8?unit=196194
-
 check_registration_form.py https://stepik.org/lesson/138920/step/10?unit=196194
 
 check_registration_with_bugz.py https://stepik.org/lesson/138920/step/11?unit=196194
