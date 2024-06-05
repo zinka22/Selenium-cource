@@ -14,8 +14,8 @@ try:
 
     browser.switch_to.window(browser.window_handles[1])
 
-    x_element = browser.find_element(By.ID, "input_value")
-    element_x_int = int(x_element.text)
+    input_value = browser.find_element(By.ID, "input_value")
+    element_x_int = int(input_value.text)
     math_result = helpers.solve_math_expression_for_captcha(element_x_int)
 
     answer_form = browser.find_element(By.ID, "answer")
