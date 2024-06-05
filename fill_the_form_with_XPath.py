@@ -1,3 +1,5 @@
+# Задание содержится в tasks/fill_the_form_with_XPath.md
+
 from selenium.webdriver.common.by import By
 
 import helpers
