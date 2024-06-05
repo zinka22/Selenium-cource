@@ -47,7 +47,7 @@ class TestAbs(unittest.TestCase):
         finally:
             helpers.wait_ten_seconds_and_close(browser)
 
-    def test_check_registration_with_bugz(self):
+    def test_check_registration_with_bugs(self):
         browser = None
         try:
             browser = helpers.open_browser_page(
