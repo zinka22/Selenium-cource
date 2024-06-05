@@ -15,7 +15,6 @@ class TestAbs(unittest.TestCase):
             link="http://suninjuly.github.io/registration1.html"
         )
 
-        # Ваш код, который заполняет обязательные поля
         input_name = browser.find_element(By.CLASS_NAME, "form-control.first")
         input_name.send_keys("Ivan")
         input_surname = browser.find_element(By.CLASS_NAME, "form-control.second")
@@ -23,7 +22,6 @@ class TestAbs(unittest.TestCase):
         input_email = browser.find_element(By.CLASS_NAME, "form-control.third")
         input_email.send_keys("nn@mailto.plus")
 
-        # Отправляем заполненную форму
         submit_button = browser.find_element(By.CSS_SELECTOR, "button.btn")
         submit_button.click()
 
@@ -31,7 +29,6 @@ class TestAbs(unittest.TestCase):
             ec.presence_of_element_located((By.TAG_NAME, "h1"))
         )
 
-        # записываем в переменную welcome_text текст из элемента welcome_text_element
         welcome_text = welcome_text_element.text
 
         self.assertEqual(
@@ -45,7 +42,6 @@ class TestAbs(unittest.TestCase):
             link="http://suninjuly.github.io/registration2.html"
         )
 
-        # Ваш код, который заполняет обязательные поля
         input_name = browser.find_element(
             By.CSS_SELECTOR, '[class="form-control first"]:required'
         )
@@ -59,7 +55,6 @@ class TestAbs(unittest.TestCase):
         )
         input_email.send_keys("nn@mailto.plus")
 
-        # Отправляем заполненную форму
         submit_button = browser.find_element(By.CSS_SELECTOR, "button.btn")
         submit_button.click()
 
@@ -67,10 +62,8 @@ class TestAbs(unittest.TestCase):
             ec.presence_of_element_located((By.TAG_NAME, "h1"))
         )
 
-        # записываем в переменную welcome_text текст из элемента welcome_text_element
         welcome_text = welcome_text_element.text
 
-        # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
         self.assertEqual(
             "Congratulations! You have successfully registered!",
             welcome_text,
