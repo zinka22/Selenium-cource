@@ -17,11 +17,11 @@ try:
     button = browser.find_element(By.ID, "book")
     button.click()
 
-    element_x_int = int(browser.find_element(By.ID, "input_value").text)
-    math_result = helpers.solve_math_expression_for_captcha(element_x_int)
+    input_value = int(browser.find_element(By.ID, "input_value").text)
+    function_value = helpers.get_math_function_value(input_value)
 
     answer_field = browser.find_element(By.ID, "answer")
-    answer_field.send_keys(math_result)
+    answer_field.send_keys(function_value)
 
     submit_button = browser.find_element(By.ID, "solve")
     submit_button.click()
