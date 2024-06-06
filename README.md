@@ -7,11 +7,10 @@
 | [Поиск элемента по XPath](tasks/fill_the_form_with_XPath.md) | [fill_the_form_with_XPath](solutions/fill_the_form_with_XPath.py) |
 |            [Вывод pytest](tasks/pytest_style.md)             |             [pytest_style](solutions/pytest_style.py)             |
 |    [Переход на новую вкладку](tasks/switch_to_window.md)     |         [switch_to_window](solutions/switch_to_window.py)         |
+| [Работа с выпадающим списком](tasks/working_with_dropdown_list.md) | [working_with_dropdown_list](solutions/working_with_dropdown_list.py) |
 
 ---
 fill_the_huge_form.py https://stepik.org/lesson/138920/step/7?unit=196194
-
-working with drop-down list.py     https://stepik.org/lesson/228249/step/3?unit=200781
 
 check_registration_form.py https://stepik.org/lesson/138920/step/10?unit=196194
 

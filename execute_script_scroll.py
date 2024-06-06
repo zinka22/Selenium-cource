@@ -8,12 +8,11 @@ try:
         link="https://SunInJuly.github.io/execute_script.html"
     )
 
-    find_element_x = browser.find_element(value="input_value")
-    element_x_int = int(find_element_x.text)
-    math_result = helpers.solve_math_expression_for_captcha(element_x_int)
+    input_value = int(browser.find_element(value="input_value").text)
+    function_value = helpers.get_math_function_value(input_value)
 
     answer_form = browser.find_element(value="answer")
-    answer_form.send_keys(math_result)
+    answer_form.send_keys(function_value)
 
     robot_checkbox = browser.find_element(value="robotCheckbox")
     browser.execute_script("return arguments[0].scrollIntoView(true);", robot_checkbox)
