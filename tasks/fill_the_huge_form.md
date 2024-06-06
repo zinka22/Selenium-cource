@@ -1,4 +1,4 @@
-## Задание к [fill_the_huge_form](../fill_the_huge_form.py)
+## Задание к [fill_the_huge_form](../solutions/fill_the_huge_form.py)
 
 ### Использование find_elements
 
