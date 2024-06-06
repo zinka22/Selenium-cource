@@ -1,3 +1,5 @@
+# Задание содержится в tasks/fill_the_huge_form.md
+
 from selenium.webdriver.common.by import By
 
 import helpers
