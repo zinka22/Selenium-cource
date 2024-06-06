@@ -13,6 +13,9 @@ class TestAbs(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Chrome()
 
+    def tearDown(self):
+        self.browser.quit()
+
     def test_check_registration_form(self):
         self.browser.get("http://suninjuly.github.io/registration1.html")
 
@@ -68,9 +71,6 @@ class TestAbs(unittest.TestCase):
             welcome_text,
             "Welcome text should be 'Congratulations! You have successfully registered!'",
         )
-
-    def tearDown(self):
-        self.browser.quit()
 
 
 if __name__ == "__main__":
