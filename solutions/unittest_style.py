@@ -2,30 +2,31 @@
 
 import unittest
 
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
-import helpers
-
 
 class TestAbs(unittest.TestCase):
-    def test_check_registration_form(self):
-        browser = helpers.open_browser_page(
-            link="http://suninjuly.github.io/registration1.html"
-        )
 
-        input_name = browser.find_element(By.CLASS_NAME, "form-control.first")
+    def setUp(self):
+        self.browser = webdriver.Chrome()
+
+    def test_check_registration_form(self):
+        self.browser.get("http://suninjuly.github.io/registration1.html")
+
+        input_name = self.browser.find_element(By.CLASS_NAME, "form-control.first")
         input_name.send_keys("Ivan")
-        input_surname = browser.find_element(By.CLASS_NAME, "form-control.second")
+        input_surname = self.browser.find_element(By.CLASS_NAME, "form-control.second")
         input_surname.send_keys("Petrov")
-        input_email = browser.find_element(By.CLASS_NAME, "form-control.third")
+        input_email = self.browser.find_element(By.CLASS_NAME, "form-control.third")
         input_email.send_keys("nn@mailto.plus")
 
-        submit_button = browser.find_element(By.CSS_SELECTOR, "button.btn")
+        submit_button = self.browser.find_element(By.CSS_SELECTOR, "button.btn")
         submit_button.click()
 
-        welcome_text_element = WebDriverWait(browser, 15).until(
+        welcome_text_element = WebDriverWait(self.browser, 15).until(
             ec.presence_of_element_located((By.TAG_NAME, "h1"))
         )
 
@@ -37,30 +38,26 @@ class TestAbs(unittest.TestCase):
             "Welcome text should be 'Congratulations! You have successfully registered!'",
         )
 
-        browser.quit()
-
     def test_check_registration_with_bugs(self):
-        browser = helpers.open_browser_page(
-            link="http://suninjuly.github.io/registration2.html"
-        )
+        self.browser.get("http://suninjuly.github.io/registration2.html")
 
-        input_name = browser.find_element(
+        input_name = self.browser.find_element(
             By.CSS_SELECTOR, '[class="form-control first"]:required'
         )
         input_name.send_keys("Ivan")
-        input_surname = browser.find_element(
+        input_surname = self.browser.find_element(
             By.CSS_SELECTOR, '[class="form-control second"]:required'
         )
         input_surname.send_keys("Petrov")
-        input_email = browser.find_element(
+        input_email = self.browser.find_element(
             By.CSS_SELECTOR, '[class="form-control third"]:required'
         )
         input_email.send_keys("nn@mailto.plus")
 
-        submit_button = browser.find_element(By.CSS_SELECTOR, "button.btn")
+        submit_button = self.browser.find_element(By.CSS_SELECTOR, "button.btn")
         submit_button.click()
 
-        welcome_text_element = WebDriverWait(browser, 15).until(
+        welcome_text_element = WebDriverWait(self.browser, 15).until(
             ec.presence_of_element_located((By.TAG_NAME, "h1"))
         )
 
@@ -72,7 +69,8 @@ class TestAbs(unittest.TestCase):
             "Welcome text should be 'Congratulations! You have successfully registered!'",
         )
 
-        browser.quit()
+    def tearDown(self):
+        self.browser.quit()
 
 
 if __name__ == "__main__":
