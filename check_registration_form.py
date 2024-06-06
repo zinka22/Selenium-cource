@@ -1,6 +1,6 @@
-from time import sleep
-
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.ui import WebDriverWait
 
 import helpers
 
@@ -22,12 +22,10 @@ try:
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
 
-    # Проверяем, что смогли зарегистрироваться
-    # ждем загрузки страницы
-    sleep(1)
+    welcome_text_elt = WebDriverWait(browser, 15).until(
+        ec.presence_of_element_located((By.TAG_NAME, "h1"))
+    )
 
-    # находим элемент, содержащий текст
-    welcome_text_elt = browser.find_element(By.TAG_NAME, "h1")
     # записываем в переменную welcome_text текст из элемента welcome_text_elt
     welcome_text = welcome_text_elt.text
 
