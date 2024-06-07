@@ -10,12 +10,12 @@ try:
         link="http://suninjuly.github.io/huge_form.html"
     )
 
-    elements = browser.find_elements(By.TAG_NAME, "input")
-    for element in elements:
-        element.send_keys("Наташа Умница")
+    text_fields = browser.find_elements(By.TAG_NAME, "input")
+    for field in text_fields:
+        field.send_keys("Наташа Умница")
 
-    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
-    button.click()
+    submit_button = browser.find_element(By.CSS_SELECTOR, "button.btn")
+    submit_button.click()
 
 finally:
     helpers.wait_ten_seconds_and_close(browser)
