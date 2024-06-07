@@ -1,3 +1,5 @@
+# Задание содержится в tasks/execute_script_scroll.md
+
 from selenium.webdriver.common.by import By
 
 import helpers

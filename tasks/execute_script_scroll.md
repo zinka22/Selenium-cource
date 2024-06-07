@@ -1,4 +1,4 @@
-## Задание к [execute_script_scroll.py](../execute_script_scroll.py)
+## Задание к [execute_script_scroll.py](../solutions/execute_script_scroll.py)
 
 ### Использование execute_script
 
