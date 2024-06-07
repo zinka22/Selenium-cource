@@ -3,6 +3,7 @@
 |                              Описание                              |                              Реализация                               |
 |:------------------------------------------------------------------:|:---------------------------------------------------------------------:|
 |      [Подтверждение действия в alert](tasks/confirm_alert.md)      |              [confirm_alert](solutions/confirm_alert.py)              |
+|   [Использование execute_script](tasks/execute_script_scroll.md)   |      [execute_script_scroll](solutions/execute_script_scroll.py)      |
 |         [Настройка ожиданий](tasks/expected_conditions.md)         |        [expected_conditions](solutions/expected_conditions.py)        |
 |    [Поиск элемента по XPath](tasks/fill_the_form_with_XPath.md)    |   [fill_the_form_with_XPath](solutions/fill_the_form_with_XPath.py)   |
 |     [Использование find_elements](tasks/fill_the_huge_form.md)     |         [fill_the_huge_form](solutions/fill_the_huge_form.py)         |
@@ -20,7 +21,5 @@ check_registration_with_bugz.py https://stepik.org/lesson/138920/step/11?unit=19
 radio_and_checkbox.py https://stepik.org/lesson/165493/step/5?unit=140087
 
 get_attribute.py https://stepik.org/lesson/165493/step/7?unit=140087
-
-execute_script_scroll https://stepik.org/lesson/228249/step/6?unit=200781
 
 upload_file_from_pc  https://stepik.org/lesson/228249/step/8?unit=200781

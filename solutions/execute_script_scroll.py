@@ -1,3 +1,5 @@
+# Задание содержится в tasks/execute_script_scroll.md
+
 from selenium.webdriver.common.by import By
 
 import helpers
@@ -5,7 +7,7 @@ import helpers
 browser = None
 try:
     browser = helpers.open_browser_page(
-        link="https://SunInJuly.github.io/execute_script.html"
+        link="https://suninjuly.github.io/execute_script.html"
     )
 
     input_value = int(browser.find_element(value="input_value").text)
