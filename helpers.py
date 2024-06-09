@@ -4,11 +4,11 @@ from math import log, sin
 from selenium import webdriver
 
 
-def get_math_function_value(x: int):
+def get_math_function_value(x: int) -> str:
     """Calculate math expression, which value
     will be used to solve captcha
     """
-    return str(log(abs(12 * sin(x))))
+    return str(log(abs(12 * sin(int(x)))))
 
 
 def open_browser_page(link):
