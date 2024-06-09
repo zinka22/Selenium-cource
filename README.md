@@ -2,6 +2,7 @@
 
 |                              Описание                              |                              Реализация                               |
 |:------------------------------------------------------------------:|:---------------------------------------------------------------------:|
+|      [Заполнение формы: уникальность селекторов](tasks/check_registration_form.md)      |              [check_registration_form](solutions/check_registration_form.py)              |
 |      [Подтверждение действия в alert](tasks/confirm_alert.md)      |              [confirm_alert](solutions/confirm_alert.py)              |
 |   [Использование execute_script](tasks/execute_script_scroll.md)   |      [execute_script_scroll](solutions/execute_script_scroll.py)      |
 |         [Настройка ожиданий](tasks/expected_conditions.md)         |        [expected_conditions](solutions/expected_conditions.py)        |
@@ -13,8 +14,6 @@
 | [Работа с выпадающим списком](tasks/working_with_dropdown_list.md) | [working_with_dropdown_list](solutions/working_with_dropdown_list.py) |
 
 ---
-
-check_registration_form.py https://stepik.org/lesson/138920/step/10?unit=196194
 
 check_registration_with_bugz.py https://stepik.org/lesson/138920/step/11?unit=196194
 
