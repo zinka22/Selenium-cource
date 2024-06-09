@@ -11,11 +11,13 @@ def get_math_function_value(x: int):
     return str(log(abs(12 * sin(x))))
 
 
-def open_browser_page(link):
+def open_browser_page(input_param):
     """Call Chrome browser,
+    produce the link to target web-site,
     then open link in browser
     """
     browser = webdriver.Chrome()
+    link = "".join(["https://suninjuly.github.io/", input_param, ".html"])
     browser.get(link)
     return browser
 
