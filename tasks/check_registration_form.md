@@ -1,4 +1,4 @@
-## Задание к [check_registration_form](../check_registration_form.py)
+## Задание к [check_registration_form](../solutions/check_registration_form.py)
 
 ### Заполнение формы: уникальность селекторов
 

@@ -1,3 +1,5 @@
+# Задание содержится в tasks/check_registration_form.md
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait

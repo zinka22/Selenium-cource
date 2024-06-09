@@ -5,7 +5,8 @@
 На этот раз воспользуемся возможностью искать элементы по XPath.
 
 На странице https://suninjuly.github.io/find_xpath_form вы найдёте такую же форму регистрации, как в
-[check_registration_form](../check_registration_form.py), при этом в неё добавилась куча одинаковых кнопок отправки.
+[check_registration_form](../solutions/check_registration_form.py), при этом в неё добавилась куча одинаковых кнопок
+отправки.
 Но сработает только кнопка с текстом "Submit", и наша задача нажать в коде именно на неё.
 
 Ваши шаги:
