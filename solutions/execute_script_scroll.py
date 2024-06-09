@@ -10,7 +10,7 @@ try:
         link="https://suninjuly.github.io/execute_script.html"
     )
 
-    input_value = int(browser.find_element(value="input_value").text)
+    input_value = browser.find_element(value="input_value").text
     function_value = helpers.get_math_function_value(input_value)
 
     answer_form = browser.find_element(value="answer")
