@@ -3,6 +3,8 @@ from math import log, sin
 
 from selenium import webdriver
 
+base_url = "https://suninjuly.github.io"
+
 
 def get_math_function_value(x: int):
     """Calculate math expression, which value
@@ -11,13 +13,12 @@ def get_math_function_value(x: int):
     return str(log(abs(12 * sin(x))))
 
 
-def open_browser_page(input_param):
+def open_browser_page(link):
     """Call Chrome browser,
     produce the link to target web-site,
     then open link in browser
     """
     browser = webdriver.Chrome()
-    link = "".join(["https://suninjuly.github.io/", input_param, ".html"])
     browser.get(link)
     return browser
 
