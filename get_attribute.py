@@ -9,7 +9,7 @@ try:
     )
 
     chest_element = browser.find_element(By.CSS_SELECTOR, "[src='images/chest.png']")
-    input_value = int(chest_element.get_attribute("valuex"))
+    input_value = chest_element.get_attribute("valuex")
 
     function_value = helpers.get_math_function_value(input_value)
 
