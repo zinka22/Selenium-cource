@@ -6,9 +6,7 @@ import helpers
 
 browser = None
 try:
-    browser = helpers.open_browser_page(
-        link="http://suninjuly.github.io/find_xpath_form"
-    )
+    browser = helpers.open_browser_page(link=f"{helpers.base_url}/find_xpath_form")
 
     elements = browser.find_elements(By.TAG_NAME, "input")
     for element in elements:

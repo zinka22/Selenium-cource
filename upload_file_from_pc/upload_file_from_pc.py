@@ -6,9 +6,7 @@ import helpers
 
 browser = None
 try:
-    browser = helpers.open_browser_page(
-        link="http://suninjuly.github.io/file_input.html"
-    )
+    browser = helpers.open_browser_page(link=f"{helpers.base_url}/file_input.html")
 
     field_name = browser.find_element(By.NAME, "firstname")
     field_name.send_keys("Ivan")

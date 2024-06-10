@@ -3,6 +3,8 @@ from math import log, sin
 
 from selenium import webdriver
 
+base_url = "https://suninjuly.github.io"
+
 
 def get_math_function_value(x: int | str) -> str:
     """Calculate math expression, which value

@@ -4,9 +4,7 @@ import helpers
 
 browser = None
 try:
-    browser = helpers.open_browser_page(
-        link="http://suninjuly.github.io/get_attribute.html"
-    )
+    browser = helpers.open_browser_page(link=f"{helpers.base_url}/get_attribute.html")
 
     chest_element = browser.find_element(By.CSS_SELECTOR, "[src='images/chest.png']")
     input_value = chest_element.get_attribute("valuex")

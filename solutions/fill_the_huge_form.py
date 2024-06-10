@@ -6,9 +6,7 @@ import helpers
 
 browser = None
 try:
-    browser = helpers.open_browser_page(
-        link="http://suninjuly.github.io/huge_form.html"
-    )
+    browser = helpers.open_browser_page(link=f"{helpers.base_url}/huge_form.html")
 
     text_fields = browser.find_elements(By.TAG_NAME, "input")
     for field in text_fields:

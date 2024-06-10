@@ -8,9 +8,8 @@ import helpers
 
 browser = None
 try:
-    browser = helpers.open_browser_page(
-        link="http://suninjuly.github.io/explicit_wait2.html"
-    )
+    browser = helpers.open_browser_page(link=f"{helpers.base_url}/explicit_wait2.html")
+
     check_for_correct_price = WebDriverWait(browser, 15).until(
         ec.text_to_be_present_in_element((By.ID, "price"), "100")
     )
