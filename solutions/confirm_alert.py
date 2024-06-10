@@ -6,7 +6,7 @@ import helpers
 
 browser = None
 try:
-    browser = helpers.open_browser_page("alert_accept")
+    browser = helpers.open_browser_page(link=f"{helpers.base_url}/alert_accept.html")
 
     magic_button = browser.find_element(By.CLASS_NAME, "btn-primary")
     magic_button.click()
