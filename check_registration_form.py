@@ -6,9 +6,7 @@ import helpers
 
 browser = None
 try:
-    browser = helpers.open_browser_page(
-        link="http://suninjuly.github.io/registration1.html"
-    )
+    browser = helpers.open_browser_page(link=f"{helpers.base_url}/registration1.html")
 
     # Ваш код, который заполняет обязательные поля
     input1 = browser.find_element(By.CLASS_NAME, "form-control.first")
