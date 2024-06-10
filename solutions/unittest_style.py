@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-class RegistrationFormSuccessFailureTest(unittest.TestCase):
+class RegistrationFormTest(unittest.TestCase):
 
     def setUp(self):
         self.browser = webdriver.Chrome()
