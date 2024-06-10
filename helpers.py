@@ -4,7 +4,7 @@ from math import log, sin
 from selenium import webdriver
 
 
-def get_math_function_value(x: int) -> str:
+def get_math_function_value(x: int | str) -> str:
     """Calculate math expression, which value
     will be used to solve captcha
     """
