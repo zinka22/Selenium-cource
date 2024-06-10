@@ -15,7 +15,6 @@ def get_math_function_value(x: int):
 
 def open_browser_page(link):
     """Call Chrome browser,
-    produce the link to target web-site,
     then open link in browser
     """
     browser = webdriver.Chrome()
