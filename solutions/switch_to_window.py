@@ -7,7 +7,7 @@ import helpers
 browser = None
 try:
     browser = helpers.open_browser_page(link=f"{helpers.base_url}/redirect_accept.html")
-    
+
     magic_button = browser.find_element(By.CLASS_NAME, "btn-primary")
     magic_button.click()
 
