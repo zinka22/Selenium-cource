@@ -6,9 +6,7 @@ import helpers
 
 browser = None
 try:
-    browser = helpers.open_browser_page(
-        link="https://suninjuly.github.io/execute_script.html"
-    )
+    browser = helpers.open_browser_page(link=f"{helpers.base_url}/execute_script.html")
 
     input_value = int(browser.find_element(value="input_value").text)
     function_value = helpers.get_math_function_value(input_value)
