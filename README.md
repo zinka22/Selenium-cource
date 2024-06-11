@@ -10,13 +10,12 @@
 |               [Поиск элемента по XPath](tasks/fill_the_form_with_XPath.md)               |     [fill_the_form_with_XPath](solutions/fill_the_form_with_XPath.py)     |
 |                [Использование find_elements](tasks/fill_the_huge_form.md)                |           [fill_the_huge_form](solutions/fill_the_huge_form.py)           |
 |                          [Вывод pytest](tasks/pytest_style.md)                           |                 [pytest_style](solutions/pytest_style.py)                 |
+|                 [Сheckboxes и radiobuttons](tasks/radio_and_checkbox.md)                 |           [radio_and_checkbox](solutions/radio_and_checkbox.py)           |
 |                  [Переход на новую вкладку](tasks/switch_to_window.md)                   |             [switch_to_window](solutions/switch_to_window.py)             |
 |              [Оформление тестов в стиле unittest](tasks/unittest_style.md)               |               [unittest_style](solutions/unittest_style.py)               |
 |            [Работа с выпадающим списком](tasks/working_with_dropdown_list.md)            |   [working_with_dropdown_list](solutions/working_with_dropdown_list.py)   |
 
 ---
-
-radio_and_checkbox.py https://stepik.org/lesson/165493/step/5?unit=140087
 
 get_attribute.py https://stepik.org/lesson/165493/step/7?unit=140087
 
