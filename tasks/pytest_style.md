@@ -3,7 +3,7 @@
 ### Вывод pytest
 
 Попробуйте запустить ваши тесты ([check_registration_form](../solutions/check_registration_form.py),
-[check_registration_with_bugs](../check_registration_with_bugz.py))
+[check_registration_with_bugs](../check_registration_with_bugs.py))
 с помощью pytest. В выводе найдите последнюю строку, скопируйте её и отправьте в это задание. Отправьте текст, который
 находится между === и ===.
 

@@ -8,4 +8,4 @@ def test_check_registration_form():
 
 
 def test_check_registration_with_bugs():
-    run_path("check_registration_with_bugz.py")
+    run_path("check_registration_with_bugs.py")
