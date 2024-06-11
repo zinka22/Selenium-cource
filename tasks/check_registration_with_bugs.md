@@ -1,4 +1,4 @@
-## Задание к [check_registration_with_bugs](../check_registration_with_bugs.py)
+## Задание к [check_registration_with_bugs](../solutions/check_registration_with_bugs.py)
 
 ### Уникальность селекторов: NoSuchElementException
 
