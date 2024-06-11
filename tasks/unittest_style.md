@@ -4,7 +4,7 @@
 
 Попробуйте оформить тесты из первого модуля в стиле unittest. Для этого:
 
-1) возьмите тесты из [check_registration_form](../check_registration_form.py) и
+1) возьмите тесты из [check_registration_form](../solutions/check_registration_form.py) и
    [check_registration_with_bugs](../check_registration_with_bugz.py);
 2) создайте новый файл;
 3) создайте в нем класс с тестами, который должен наследоваться от `unittest.TestCase`;
