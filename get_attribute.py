@@ -1,3 +1,5 @@
+# Задание содержится в tasks/get_attribute.md
+
 from selenium.webdriver.common.by import By
 
 import helpers
