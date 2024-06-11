@@ -1,3 +1,5 @@
+# Задание содержится в tasks/get_attribute.md
+
 from selenium.webdriver.common.by import By
 
 import helpers
@@ -17,12 +19,11 @@ try:
     checkbox = browser.find_element(By.CSS_SELECTOR, "#robotCheckbox")
     checkbox.click()
 
-    radio = browser.find_element(By.CSS_SELECTOR, "#robotsRule")
-    radio.click()
+    radio_button = browser.find_element(By.CSS_SELECTOR, "#robotsRule")
+    radio_button.click()
 
     submit_button = browser.find_element(By.CSS_SELECTOR, "[class='btn btn-default']")
     submit_button.click()
-
 
 finally:
     helpers.wait_ten_seconds_and_close(browser)
