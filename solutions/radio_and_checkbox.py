@@ -1,3 +1,5 @@
+# Задание содержится в tasks/radio_and_checkbox.md
+
 from selenium.webdriver.common.by import By
 
 import helpers

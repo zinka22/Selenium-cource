@@ -1,4 +1,4 @@
-## Задание к [radio_and_checkbox](../radio_and_checkbox.py)
+## Задание к [radio_and_checkbox](../solutions/radio_and_checkbox.py)
 
 ### Сheckboxes и radiobuttons
 
