@@ -31,7 +31,7 @@ try:
     welcome_text_element = WebDriverWait(browser, 15).until(
         ec.presence_of_element_located((By.TAG_NAME, "h1"))
     )
-   
+
     welcome_text = welcome_text_element.text
 
     # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
