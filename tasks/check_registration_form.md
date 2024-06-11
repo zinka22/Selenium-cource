@@ -9,5 +9,5 @@
 3) отправить заполненную форму;
 4) подождать загрузки страницы с сообщением об успехе регистрации;
 5) проверить, что текст с сообщением об успехе совпадает с ожидаемым текстом
-   "Congratulations! You have successfully registered!" (использовать assert);
+   "Congratulations! You have successfully registered!" (использовать `assert`);
 6) закрыть браузер.
