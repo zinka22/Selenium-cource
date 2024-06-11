@@ -1,4 +1,4 @@
-## Задание к [upload_file_from_pc](../upload_file_from_pc/upload_file_from_pc.py)
+## Задание к [upload_file_from_pc](../solutions/upload_file_from_pc/upload_file_from_pc.py)
 
 ### Загрузка файла
 

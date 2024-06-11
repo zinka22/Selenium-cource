@@ -1,3 +1,5 @@
+# Задание содержится в tasks/upload_file_from_pc.md
+
 import os
 
 from selenium.webdriver.common.by import By
