@@ -1,4 +1,4 @@
-## Задание к [get_attribute](../get_attribute.py)
+## Задание к [get_attribute](../solutions/get_attribute.py)
 
 ### Поиск сокровища с помощью get_attribute
 
