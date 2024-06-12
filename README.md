@@ -15,8 +15,5 @@
 |              [Оформление тестов в стиле unittest](tasks/unittest_style.md)               |                [unittest_style](solutions/unittest_style.py)                |
 |                      [Загрузка файла](tasks/upload_file_from_pc.md)                      | [upload_file_from_pc](solutions/upload_file_from_pc/upload_file_from_pc.py) |
 |            [Работа с выпадающим списком](tasks/working_with_dropdown_list.md)            |    [working_with_dropdown_list](solutions/working_with_dropdown_list.py)    |
-
----
-
 radio_and_checkbox.py https://stepik.org/lesson/165493/step/5?unit=140087
 
