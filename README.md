@@ -11,7 +11,7 @@
 |                [Использование find_elements](tasks/fill_the_huge_form.md)                |            [fill_the_huge_form](solutions/fill_the_huge_form.py)            |
 |            [Поиск сокровища с помощью get_attribute](tasks/get_attribute.md)             |                 [get_attribute](solutions/get_attribute.py)                 |
 |                          [Вывод pytest](tasks/pytest_style.md)                           |                  [pytest_style](solutions/pytest_style.py)                  |
-|                 [Сheckboxes и radiobuttons](tasks/radio_and_checkbox.md)                 |            [radio_and_checkbox](solutions/radio_and_checkbox.py)            |
+|                 [Checkboxes и radiobuttons](tasks/radio_and_checkbox.md)                 |            [radio_and_checkbox](solutions/radio_and_checkbox.py)            |
 |                  [Переход на новую вкладку](tasks/switch_to_window.md)                   |              [switch_to_window](solutions/switch_to_window.py)              |
 |              [Оформление тестов в стиле unittest](tasks/unittest_style.md)               |                [unittest_style](solutions/unittest_style.py)                |
 |                      [Загрузка файла](tasks/upload_file_from_pc.md)                      | [upload_file_from_pc](solutions/upload_file_from_pc/upload_file_from_pc.py) |
