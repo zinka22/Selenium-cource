@@ -1,3 +1,5 @@
+# Задание содержится в tasks/test_authorization.md
+
 from selenium.webdriver.common.by import By
 
 
