@@ -1,4 +1,4 @@
-## Задание к [authorization](../solutions/pytest_folder/test_authorization.py)
+## Задание к [test_authorization](../solutions/pytest_folder/test_authorization.py)
 
 ### Авторизация на сайте
 
