@@ -1,6 +1,8 @@
+import json
+from pathlib import Path
+
 import pytest
 from selenium import webdriver
-import json
 
 
 @pytest.fixture(scope="function")
@@ -13,6 +15,5 @@ def browser():
 
 @pytest.fixture(scope="function")
 def auth_data():
-    with open("auth_keys_stepik.json", "r") as data:
-        auth_data = json.load(data)
-        return auth_data
+    auth_path = Path().rglob("auth_keys_stepik.json")
+    return json.loads(next(auth_path).read_text())
