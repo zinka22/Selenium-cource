@@ -16,7 +16,7 @@ def browser():
 @pytest.fixture(scope="function")
 def auth_data() -> dict[str, str]:
     """Read login, password from auth_keys_stepic.json file
-    and return them as a dictionary
+    and return them as a dictionary.
     """
     auth_path = Path().rglob("auth_keys_stepik.json")
     return json.loads(next(auth_path).read_text())
