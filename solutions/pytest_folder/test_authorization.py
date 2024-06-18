@@ -1,4 +1,5 @@
 # Задание содержится в tasks/test_authorization.md
+
 from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
@@ -22,10 +23,10 @@ def test_authorization(browser, auth_data):
 
     def user_is_authorised():
         try:
-            popup_was_closed = WebDriverWait(browser, 5).until(
+            popup_is_closed = WebDriverWait(browser, 5).until(
                 ec.invisibility_of_element_located((By.ID, "login_form"))
             )
-            return popup_was_closed
+            return popup_is_closed
         except TimeoutException:
             return False
 
