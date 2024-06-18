@@ -1,6 +1,8 @@
 # Задание содержится в tasks/test_authorization.md
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 def test_authorization(browser, auth_data):
@@ -17,3 +19,11 @@ def test_authorization(browser, auth_data):
 
     submit_button = browser.find_element(By.CLASS_NAME, "sign-form__btn")
     submit_button.click()
+
+    def user_is_authorised():
+        popup_was_closed = WebDriverWait(browser, 3).until(
+            ec.invisibility_of_element_located((By.ID, "login_form"))
+        )
+        return popup_was_closed
+
+    assert user_is_authorised(), "User is guest"
