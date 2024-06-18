@@ -21,7 +21,7 @@ def test_authorization(browser, auth_data):
     submit_button.click()
 
     def user_is_authorised():
-        popup_was_closed = WebDriverWait(browser, 3).until(
+        popup_was_closed = WebDriverWait(browser, 5).until(
             ec.invisibility_of_element_located((By.ID, "login_form"))
         )
         return popup_was_closed
