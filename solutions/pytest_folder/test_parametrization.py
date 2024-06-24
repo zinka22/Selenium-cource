@@ -40,7 +40,7 @@ def test_check_urls_on_feedback(browser, auth_data, link):
     submit_button.click()
 
     def user_is_authorised():
-        """Check if user was authorized"""
+        """Check if the user is authorized."""
         try:
             popup_is_closed = WebDriverWait(browser, 5).until(
                 ec.invisibility_of_element_located((By.ID, "login_form"))
