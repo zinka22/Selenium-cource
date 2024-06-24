@@ -23,6 +23,7 @@ urls = [
 
 @pytest.mark.parametrize("link", urls)
 def test_check_urls_on_feedback(browser, auth_data, link):
+    """Test to check feedback text after successfully solving task"""
     # авторизация
     browser.get(f"https://stepik.org/lesson/{link}/step/1")
 
