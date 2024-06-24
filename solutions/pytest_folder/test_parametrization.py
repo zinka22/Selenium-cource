@@ -22,7 +22,9 @@ urls = [
 
 
 @pytest.mark.parametrize("link", urls)
-def test_check_urls_on_feedback(browser, auth_data, link):
+def test_check_urls_on_feedback(
+    browser, auth_data, link, user_authorization_checker_factory
+):
     """Test to check feedback text after successfully solving task"""
     # авторизация
     browser.get(f"https://stepik.org/lesson/{link}/step/1")
@@ -39,19 +41,12 @@ def test_check_urls_on_feedback(browser, auth_data, link):
     submit_button = browser.find_element(By.CLASS_NAME, "sign-form__btn")
     submit_button.click()
 
-    def user_is_authorised():
-        """Check if the user is authorized."""
-        try:
-            popup_is_closed = WebDriverWait(browser, 5).until(
-                ec.invisibility_of_element_located((By.ID, "login_form"))
-            )
-            return popup_is_closed
-        except TimeoutException:
-            return False
+    # проверка, авторизован ли пользователь
+    user_is_authorized = user_authorization_checker_factory()
 
-    if user_is_authorised():
+    if user_is_authorized:
 
-        # проверяем, есть ли кнопка "Решить снова"
+        # проверка, есть ли кнопка "Решить снова"
         try:
             again_button = WebDriverWait(browser, 15).until(
                 ec.element_to_be_clickable((By.CLASS_NAME, "again-btn"))
@@ -61,7 +56,7 @@ def test_check_urls_on_feedback(browser, auth_data, link):
         except TimeoutException:
             pass
 
-        # решаем, отправляем решение
+        # решение, отправка решения
         input_answer = WebDriverWait(browser, 120).until(
             ec.element_to_be_clickable((By.CLASS_NAME, "ember-text-area"))
         )
@@ -72,7 +67,7 @@ def test_check_urls_on_feedback(browser, auth_data, link):
         )
         send_answer_button.click()
 
-        # проверяем, совпадает ли текст с ожидаемым
+        # проверка, совпадает ли текст с ожидаемым
         feedback_text = (
             WebDriverWait(browser, 150)
             .until(ec.visibility_of_element_located((By.CLASS_NAME, "smart-hints")))
@@ -81,4 +76,4 @@ def test_check_urls_on_feedback(browser, auth_data, link):
 
         assert feedback_text == "Correct!", f"Wait 'Correct!', get {feedback_text}"
     else:
-        assert user_is_authorised(), "User is guest"
+        assert user_is_authorized, "User is guest"
