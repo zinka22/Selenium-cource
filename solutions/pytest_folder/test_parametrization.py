@@ -80,4 +80,4 @@ def test_check_urls_on_feedback(browser, auth_data, link):
 
         assert feedback_text == "Correct!", f"Wait {'Correct!'} got {feedback_text}"
     else:
-        return
+        assert user_is_authorised(), "User is guest"
