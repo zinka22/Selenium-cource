@@ -1,6 +1,6 @@
 # Задание содержится в tasks/upload_file_from_pc.md
 
-import os
+from pathlib import Path
 
 from selenium.webdriver.common.by import By
 
@@ -19,11 +19,10 @@ try:
     field_email = browser.find_element(By.NAME, "email")
     field_email.send_keys("Ivanov@mail.ru")
 
-    current_dir = os.path.abspath(os.path.dirname(__file__))
-    file_path = os.path.join(current_dir, "test__file_for_uploading.txt")
+    file_path = Path("test__file_for_uploading.txt").absolute()
 
     choose_file_button = browser.find_element(By.NAME, "file")
-    choose_file_button.send_keys(file_path)
+    choose_file_button.send_keys(str(file_path))
 
     submit_button = browser.find_element(By.CLASS_NAME, "btn-primary")
     submit_button.click()
