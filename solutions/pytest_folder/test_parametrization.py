@@ -9,6 +9,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
+from helpers import check_if_user_is_authorized
+
 urls = [
     "236895",
     "236896",
@@ -22,9 +24,7 @@ urls = [
 
 
 @pytest.mark.parametrize("link", urls)
-def test_check_urls_on_feedback(
-    browser, auth_data, link, user_authorization_checker_factory
-):
+def test_check_urls_on_feedback(browser, auth_data, link):
     """Test to check feedback text after successfully solving task."""
     # авторизация
     browser.get(f"https://stepik.org/lesson/{link}/step/1")
@@ -42,7 +42,7 @@ def test_check_urls_on_feedback(
     submit_button.click()
 
     # проверка, авторизован ли пользователь
-    user_is_authorized = user_authorization_checker_factory()
+    user_is_authorized = check_if_user_is_authorized(browser)
 
     if user_is_authorized:
 
