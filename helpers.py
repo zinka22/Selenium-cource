@@ -36,7 +36,10 @@ def wait_ten_seconds_and_close(browser):
 
 
 def check_if_user_is_authorized(browser):
-    """Check if user is authorized"""
+    """Check if the popup with
+    login and password fields was closed.
+    If it was, the user is authorized.
+    """
     if browser:
         try:
             popup_is_closed = WebDriverWait(browser, 5).until(
@@ -48,6 +51,9 @@ def check_if_user_is_authorized(browser):
 
 
 def assert_if_user_is_authorized(browser):
+    """Assert function to verify user authorization.
+    Raises an assertion error if the user is not authorized.
+    """
     assert check_if_user_is_authorized(
         browser
     ), "User is guest, the answer can't be sent"
