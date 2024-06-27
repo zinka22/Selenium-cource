@@ -70,7 +70,6 @@ def test_check_urls_on_feedback(browser, auth_data, link):
         .until(ec.visibility_of_element_located((By.CLASS_NAME, "smart-hints")))
         .text
     )
-
     assert (
         feedback_text == "Correct!"
     ), f"Expected 'Correct!' feedback text, actual is {feedback_text}."
