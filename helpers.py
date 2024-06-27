@@ -45,3 +45,9 @@ def check_if_user_is_authorized(browser):
             return popup_is_closed
         except TimeoutException:
             return False
+
+
+def assert_if_user_is_authorized(browser):
+    assert check_if_user_is_authorized(
+        browser
+    ), "User is guest, the answer can't be sent"

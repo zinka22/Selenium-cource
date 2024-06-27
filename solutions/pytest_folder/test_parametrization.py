@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
-from helpers import check_if_user_is_authorized
+from helpers import assert_if_user_is_authorized
 
 urls = [
     "236895",
@@ -42,40 +42,36 @@ def test_check_urls_on_feedback(browser, auth_data, link):
     submit_button.click()
 
     # проверка, авторизован ли пользователь
-    user_is_authorized = check_if_user_is_authorized(browser)
+    assert_if_user_is_authorized(browser)
 
-    if user_is_authorized:
-
-        # проверка, есть ли кнопка "Решить снова"
-        try:
-            again_button = WebDriverWait(browser, 5).until(
-                ec.element_to_be_clickable((By.CLASS_NAME, "again-btn"))
-            )
-            if again_button:
-                again_button.click()
-        except TimeoutException:
-            pass
-
-        # решение, отправка решения
-        input_answer = WebDriverWait(browser, 120).until(
-            ec.element_to_be_clickable((By.CLASS_NAME, "ember-text-area"))
+    # проверка, есть ли кнопка "Решить снова"
+    try:
+        again_button = WebDriverWait(browser, 5).until(
+            ec.element_to_be_clickable((By.CLASS_NAME, "again-btn"))
         )
-        input_answer.send_keys(str(math.log(int(time.time()))))
+        if again_button:
+            again_button.click()
+    except TimeoutException:
+        pass
 
-        send_answer_button = WebDriverWait(browser, 120).until(
-            ec.element_to_be_clickable((By.CLASS_NAME, "submit-submission"))
-        )
-        send_answer_button.click()
+    # решение, отправка решения
+    input_answer = WebDriverWait(browser, 120).until(
+        ec.element_to_be_clickable((By.CLASS_NAME, "ember-text-area"))
+    )
+    input_answer.send_keys(str(math.log(int(time.time()))))
 
-        # проверка, совпадает ли текст с ожидаемым
-        feedback_text = (
-            WebDriverWait(browser, 150)
-            .until(ec.visibility_of_element_located((By.CLASS_NAME, "smart-hints")))
-            .text
-        )
+    send_answer_button = WebDriverWait(browser, 120).until(
+        ec.element_to_be_clickable((By.CLASS_NAME, "submit-submission"))
+    )
+    send_answer_button.click()
 
-        assert (
-            feedback_text == "Correct!"
-        ), f"Expected 'Correct!' feedback text, actual is {feedback_text}."
-    else:
-        assert user_is_authorized, "User is guest"
+    # проверка, совпадает ли текст с ожидаемым
+    feedback_text = (
+        WebDriverWait(browser, 150)
+        .until(ec.visibility_of_element_located((By.CLASS_NAME, "smart-hints")))
+        .text
+    )
+
+    assert (
+        feedback_text == "Correct!"
+    ), f"Expected 'Correct!' feedback text, actual is {feedback_text}."
