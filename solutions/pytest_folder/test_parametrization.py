@@ -48,7 +48,7 @@ def test_check_urls_on_feedback(browser, auth_data, link):
 
         # проверка, есть ли кнопка "Решить снова"
         try:
-            again_button = WebDriverWait(browser, 15).until(
+            again_button = WebDriverWait(browser, 5).until(
                 ec.element_to_be_clickable((By.CLASS_NAME, "again-btn"))
             )
             if again_button:
