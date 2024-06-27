@@ -41,7 +41,6 @@ def test_check_urls_on_feedback(browser, auth_data, link):
     submit_button = browser.find_element(By.CLASS_NAME, "sign-form__btn")
     submit_button.click()
 
-    # проверка, авторизован ли пользователь
     assert_if_user_is_authorized(browser)
 
     # проверка, есть ли кнопка "Решить снова"
