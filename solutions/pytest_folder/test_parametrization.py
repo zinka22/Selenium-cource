@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
-from helpers import assert_if_user_is_authorized
+from helpers import assert_if_user_is_authorized_on_lesson_page
 
 urls = [
     "236895",
@@ -41,7 +41,7 @@ def test_check_urls_on_feedback(browser, auth_data, link):
     submit_button = browser.find_element(By.CLASS_NAME, "sign-form__btn")
     submit_button.click()
 
-    assert_if_user_is_authorized(browser)
+    assert_if_user_is_authorized_on_lesson_page(browser)
 
     # проверка, есть ли кнопка "Решить снова"
     try:
