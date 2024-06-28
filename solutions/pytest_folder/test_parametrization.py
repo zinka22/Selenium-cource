@@ -4,7 +4,6 @@ import math
 import time
 
 import pytest
-from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
@@ -44,14 +43,8 @@ def test_check_urls_on_feedback(browser, auth_data, link):
     assert_if_user_is_authorized_on_lesson_page(browser)
 
     # проверка, есть ли кнопка "Решить снова"
-    try:
-        again_button = WebDriverWait(browser, 5).until(
-            ec.element_to_be_clickable((By.CLASS_NAME, "again-btn"))
-        )
-        if again_button:
-            again_button.click()
-    except TimeoutException:
-        pass
+    if again_buttons := browser.find_elements(By.CLASS_NAME, "again-btn"):
+        again_buttons[0].click()
 
     # решение, отправка решения
     input_answer = WebDriverWait(browser, 120).until(
