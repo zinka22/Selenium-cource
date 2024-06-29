@@ -8,7 +8,7 @@ from selenium import webdriver
 @pytest.fixture(scope="function")
 def browser():
     browser = webdriver.Chrome()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     yield browser
     browser.quit()
 
@@ -20,3 +20,6 @@ def auth_data() -> dict[str, str]:
     """
     auth_path = Path().rglob("auth_keys_stepik.json")
     return json.loads(next(auth_path).read_text())
+
+
+pytest.register_assert_rewrite("helpers.py")

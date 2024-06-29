@@ -2,8 +2,28 @@ import time
 from math import log, sin
 
 from selenium import webdriver
+from selenium.common import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.ui import WebDriverWait
 
 base_url = "https://suninjuly.github.io"
+
+
+def assert_if_user_is_authorized(browser):
+    """Assert function to verify user authorization.
+    Raises an assertion error if the user is not authorized.
+    """
+    check_if_user_is_authorized = None
+    if browser:
+        try:
+            WebDriverWait(browser, 5).until(
+                ec.invisibility_of_element_located((By.ID, "login_form"))
+            )
+            check_if_user_is_authorized = True
+        except TimeoutException:
+            check_if_user_is_authorized = False
+    assert check_if_user_is_authorized, "User is guest, the answer can't be sent"
 
 
 def get_math_function_value(x: int | str) -> str:

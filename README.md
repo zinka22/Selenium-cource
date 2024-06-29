@@ -14,6 +14,7 @@
 |                 [Checkboxes и radiobuttons](tasks/radio_and_checkbox.md)                 |            [radio_and_checkbox](solutions/radio_and_checkbox.py)            |
 |                  [Переход на новую вкладку](tasks/switch_to_window.md)                   |              [switch_to_window](solutions/switch_to_window.py)              |
 |                   [Авторизация на сайте](tasks/test_authorization.md)                    |     [test_authorization](solutions/pytest_folder/test_authorization.py)     |
+|                  [Параметризация тестов](tasks/test_parametrization.md)                  |   [test_parametrization](solutions/pytest_folder/test_parametrization.py)   |
 |              [Оформление тестов в стиле unittest](tasks/unittest_style.md)               |                [unittest_style](solutions/unittest_style.py)                |
 |                      [Загрузка файла](tasks/upload_file_from_pc.md)                      | [upload_file_from_pc](solutions/upload_file_from_pc/upload_file_from_pc.py) |
 |            [Работа с выпадающим списком](tasks/working_with_dropdown_list.md)            |    [working_with_dropdown_list](solutions/working_with_dropdown_list.py)    |
