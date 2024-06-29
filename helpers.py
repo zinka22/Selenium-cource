@@ -19,7 +19,7 @@ def assert_if_user_is_authorized(browser):
     ), "User is guest, the answer can't be sent"
 
 
-def check_if_user_is_authorized(browser):
+def _check_if_user_is_authorized(browser):
     """Check if the popup with
     login and password fields was closed.
     If it was, the user is authorized.

@@ -29,7 +29,7 @@ def test_check_urls_on_feedback(browser, auth_data, link):
     # авторизация
     browser.get(f"https://stepik.org/lesson/{link}/step/1")
 
-    enter_button = browser.find_element(By.CLASS_NAME, "navbar__auth_login ")
+    enter_button = browser.find_element(By.CLASS_NAME, "navbar__auth_login")
     enter_button.click()
 
     input_login = browser.find_element(By.ID, "id_login_email")
