@@ -14,24 +14,16 @@ def assert_if_user_is_authorized(browser):
     """Assert function to verify user authorization.
     Raises an assertion error if the user is not authorized.
     """
-    assert check_if_user_is_authorized(
-        browser
-    ), "User is guest, the answer can't be sent"
-
-
-def _check_if_user_is_authorized(browser):
-    """Check if the popup with
-    login and password fields was closed.
-    If it was, the user is authorized.
-    """
+    check_if_user_is_authorized = None
     if browser:
         try:
-            popup_is_closed = WebDriverWait(browser, 5).until(
+            WebDriverWait(browser, 5).until(
                 ec.invisibility_of_element_located((By.ID, "login_form"))
             )
-            return popup_is_closed
+            check_if_user_is_authorized = True
         except TimeoutException:
-            return False
+            check_if_user_is_authorized = False
+    assert check_if_user_is_authorized, "User is guest, the answer can't be sent"
 
 
 def get_math_function_value(x: int | str) -> str:
