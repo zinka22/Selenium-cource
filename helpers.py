@@ -11,9 +11,7 @@ base_url = "https://suninjuly.github.io"
 
 
 def assert_if_user_is_authorized(browser):
-    """Assert function to verify user authorization.
-    Raises an assertion error if the user is not authorized.
-    """
+    """Assert function to verify user authorization. Raise an assertion error if the user is not authorized."""
     check_if_user_is_authorized = None
     if browser:
         try:
@@ -27,25 +25,19 @@ def assert_if_user_is_authorized(browser):
 
 
 def get_math_function_value(x: int | str) -> str:
-    """Calculate math expression, which value
-    will be used to solve captcha
-    """
+    """Calculate math expression, which value will be used to solve captcha."""
     return str(log(abs(12 * sin(int(x)))))
 
 
 def open_browser_page(link):
-    """Call Chrome browser,
-    then open link in browser
-    """
+    """Create Chrome browser instance, then open link in browser."""
     browser = webdriver.Chrome()
     browser.get(link)
     return browser
 
 
 def wait_ten_seconds_and_close(browser):
-    """Make wait for ten seconds,
-    then quit browser with opened page/pages
-    """
+    """Explicit wait for 10 seconds, then quit browser with opened page/pages."""
     if browser:
         time.sleep(10)
         browser.quit()
