@@ -11,7 +11,7 @@ base_url = "https://suninjuly.github.io"
 
 
 def assert_if_user_is_authorized(browser):
-    """Assert function to verify user authorization. Raises an assertion error if the user is not authorized."""
+    """Assert function to verify user authorization. Raise an assertion error if the user is not authorized."""
     check_if_user_is_authorized = None
     if browser:
         try:
