@@ -1,3 +1,5 @@
+# Задание содержится в tasks/test_run_for_different_locals.md
+
 from time import sleep
 
 from selenium.webdriver.common.by import By
