@@ -15,7 +15,7 @@
    языком пользователя. Браузер должен объявляться в фикстуре browser и передаваться в тест как параметр;
 3) напишите тест, который проверяет, что страница товара на сайте содержит кнопку добавления
    в корзину. Например, можно проверять товар, доступный по ссылке
-   http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/;
+   https://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/;
 4) тест должен запускаться с параметром language следующей командой:
    ```pytest --language=es solutions/pytest_folder/test_run_for_different_locals.py```
    и проходить успешно. Достаточно, чтобы код работал только для браузера Сhrome.
