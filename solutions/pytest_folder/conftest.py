@@ -7,19 +7,11 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
 
-def pytest_addoption(parser):
-    parser.addoption(
-        "--browser_name",
-        action="store",
-        default="chrome",
-        help="Choose browser: chrome or firefox",
-    )
-    parser.addoption(
-        "--language",
-        action="store",
-        default=None,
-        help="Choose language: es or fr",
-    )
+@pytest.fixture(scope="function")
+def auth_data() -> dict[str, str]:
+    """Read login, password from auth_keys_stepic.json file and return them as a dictionary."""
+    auth_path = Path().rglob("auth_keys_stepik.json")
+    return json.loads(next(auth_path).read_text())
 
 
 @pytest.fixture(scope="function")
@@ -43,13 +35,19 @@ def browser(request):
     browser.quit()
 
 
-@pytest.fixture(scope="function")
-def auth_data() -> dict[str, str]:
-    """Read login, password from auth_keys_stepic.json file
-    and return them as a dictionary.
-    """
-    auth_path = Path().rglob("auth_keys_stepik.json")
-    return json.loads(next(auth_path).read_text())
+def pytest_addoption(parser):
+    parser.addoption(
+        "--browser_name",
+        action="store",
+        default="chrome",
+        help="Choose browser: chrome or firefox",
+    )
+    parser.addoption(
+        "--language",
+        action="store",
+        default=None,
+        help="Choose language: es or fr",
+    )
 
 
 pytest.register_assert_rewrite("helpers.py")
