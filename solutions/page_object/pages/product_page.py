@@ -23,3 +23,10 @@ class ProductPage(BasePage):
         button_add_to_cart = self.browser.find_element(*ProductPageLocators.ADD_TO_CART)
 
         button_add_to_cart.click()
+
+    def should_be_success_message_with_right_product(self):
+        success_message = self.browser.find_element(
+            *ProductPageLocators.SUCCESS_MESSAGE
+        ).text
+        product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
+        assert success_message == product_name, "Wrong item added to cart"

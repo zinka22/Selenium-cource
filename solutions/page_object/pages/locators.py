@@ -12,3 +12,5 @@ class LoginPageLocators:
 
 class ProductPageLocators:
     ADD_TO_CART = (By.CLASS_NAME, "btn-add-to-basket")
+    PRODUCT_NAME = (By.CLASS_NAME, "product_main h1")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alertinner strong")

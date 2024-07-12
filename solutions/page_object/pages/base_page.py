@@ -1,6 +1,7 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import math
+import time
 
 
 class BasePage:
@@ -30,5 +31,6 @@ class BasePage:
             alert_text = alert.text
             print(f"Your code: {alert_text}")
             alert.accept()
+            time.sleep(5)
         except NoAlertPresentException:
             print("No second alert presented")
