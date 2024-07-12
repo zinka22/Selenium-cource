@@ -1,3 +1,5 @@
+# Задание содержится в tasks/test_product_page.md
+
 from pages.product_page import ProductPage
 
 

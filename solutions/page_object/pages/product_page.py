@@ -1,6 +1,7 @@
+import re
+
 from .base_page import BasePage
 from .locators import ProductPageLocators
-import re
 
 
 class ProductPage(BasePage):
