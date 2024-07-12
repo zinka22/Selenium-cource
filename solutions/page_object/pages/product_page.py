@@ -30,3 +30,12 @@ class ProductPage(BasePage):
         ).text
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         assert success_message == product_name, "Wrong item added to cart"
+
+    def should_cart_price_be_equal_product_price(self):
+        cart_price = self.browser.find_element(*ProductPageLocators.CART_PRICE).text
+        product_price = self.browser.find_element(
+            *ProductPageLocators.PRODUCT_PRICE
+        ).text
+        assert (
+            cart_price == product_price
+        ), f"{cart_price} {product_price} Wrong item added to cart"

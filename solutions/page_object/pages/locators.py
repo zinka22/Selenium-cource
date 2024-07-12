@@ -14,3 +14,5 @@ class ProductPageLocators:
     ADD_TO_CART = (By.CLASS_NAME, "btn-add-to-basket")
     PRODUCT_NAME = (By.CLASS_NAME, "product_main h1")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alertinner strong")
+    CART_PRICE = (By.CSS_SELECTOR, ".alertinner p strong")
+    PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
