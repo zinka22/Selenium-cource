@@ -15,6 +15,7 @@
 |                  [Переход на новую вкладку](tasks/switch_to_window.md)                   |                     [switch_to_window](solutions/switch_to_window.py)                     |
 |                   [Авторизация на сайте](tasks/test_authorization.md)                    |            [test_authorization](solutions/pytest_folder/test_authorization.py)            |
 |                  [Параметризация тестов](tasks/test_parametrization.md)                  |          [test_parametrization](solutions/pytest_folder/test_parametrization.py)          |
+|          [Добавление в корзину со страницы товара](tasks/test_product_page.md)           |              [test_product_page](solutions/page_object/test_product_page.py)              |
 | [Запуск автотестов для разных языков интерфейса](tasks/test_run_for_different_locals.md) | [test_run_for_different_locals](solutions/pytest_folder/test_run_for_different_locals.py) |
 |              [Оформление тестов в стиле unittest](tasks/unittest_style.md)               |                       [unittest_style](solutions/unittest_style.py)                       |
 |                      [Загрузка файла](tasks/upload_file_from_pc.md)                      |        [upload_file_from_pc](solutions/upload_file_from_pc/upload_file_from_pc.py)        |
