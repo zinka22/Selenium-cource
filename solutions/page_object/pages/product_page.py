@@ -11,7 +11,7 @@ class ProductPage(BasePage):
         self.should_button_add_to_cart_present()
 
     def should_be_in_cart(self):
-        self.should_be_success_message_with_right_product()
+        self.should_be_right_product_name_in_success_message()
         self.should_cart_price_be_equal_product_price()
 
     def should_be_product_url(self):
@@ -26,15 +26,17 @@ class ProductPage(BasePage):
 
     def add_product_to_cart(self):
         button_add_to_cart = self.browser.find_element(*ProductPageLocators.ADD_TO_CART)
-
+        assert button_add_to_cart.is_enabled(), "Button is not clickable"
         button_add_to_cart.click()
 
-    def should_be_success_message_with_right_product(self):
-        success_message = self.browser.find_element(
-            *ProductPageLocators.SUCCESS_MESSAGE
+    def should_be_right_product_name_in_success_message(self):
+        product_name_in_success_message = self.browser.find_element(
+            *ProductPageLocators.PRODUCT_NAME_IN_SUCCESS_MESSAGE
         ).text
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
-        assert success_message == product_name, "Wrong item added to cart"
+        assert (
+            product_name_in_success_message == product_name
+        ), "Wrong item added to cart"
 
     def should_cart_price_be_equal_product_price(self):
         cart_price = self.browser.find_element(*ProductPageLocators.CART_PRICE).text
