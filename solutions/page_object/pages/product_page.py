@@ -6,21 +6,25 @@ from .locators import ProductPageLocators
 
 class ProductPage(BasePage):
 
-    def should_be_able_to_add_product_to_basket(self):
+    def should_be_able_to_add_product_to_cart(self):
         self.should_be_product_url()
-        self.should_add_product_to_cart()
+        self.should_button_add_to_cart_present()
+
+    def should_be_in_cart(self):
+        self.should_be_success_message_with_right_product()
+        self.should_cart_price_be_equal_product_price()
 
     def should_be_product_url(self):
         current_url = self.browser.current_url
         assert re.search(
-            r"catalogue/.+", current_url
+            r"catalogue/.+/\?promo=newYear", current_url
         ), f"Expected URL to contain the word 'catalogue' and product name, but got '{current_url}'."
 
     def should_button_add_to_cart_present(self):
         button_add_to_cart = self.is_element_present(*ProductPageLocators.ADD_TO_CART)
         assert button_add_to_cart, "Add to basket button is absent"
 
-    def should_add_product_to_cart(self):
+    def add_product_to_cart(self):
         button_add_to_cart = self.browser.find_element(*ProductPageLocators.ADD_TO_CART)
 
         button_add_to_cart.click()
@@ -37,6 +41,4 @@ class ProductPage(BasePage):
         product_price = self.browser.find_element(
             *ProductPageLocators.PRODUCT_PRICE
         ).text
-        assert (
-            cart_price == product_price
-        ), f"{cart_price} {product_price} Wrong item added to cart"
+        assert cart_price == product_price, "Cart price is not equal product price"
