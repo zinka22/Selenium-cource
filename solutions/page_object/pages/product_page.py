@@ -21,7 +21,7 @@ class ProductPage(BasePage):
         ), f"Expected URL to contain the word 'catalogue' and product name, but got '{current_url}'."
 
     def should_button_add_to_cart_present(self):
-        button_add_to_cart = self.is_element_present(*ProductPageLocators.ADD_TO_CART)
+        button_add_to_cart = self.is_element_present(ProductPageLocators.ADD_TO_CART)
         assert button_add_to_cart, "Add to basket button is absent"
 
     def add_product_to_cart(self):
