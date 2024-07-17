@@ -1,7 +1,10 @@
 import math
 import time
 
-from selenium.common.exceptions import NoAlertPresentException, NoSuchElementException
+from selenium.common.exceptions import (NoAlertPresentException,
+                                        NoSuchElementException)
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class BasePage:
@@ -27,6 +30,7 @@ class BasePage:
         alert.send_keys(answer)
         alert.accept()
         try:
+            WebDriverWait(self.browser, 10).until(EC.alert_is_present())
             alert = self.browser.switch_to.alert
             alert_text = alert.text
             print(f"Your code: {alert_text}")

@@ -14,7 +14,7 @@ def pytest_addoption(parser):
     parser.addoption(
         "--language",
         action="store",
-        default=None,
+        default="ru",
         help="Choose language: es or fr",
     )
 
