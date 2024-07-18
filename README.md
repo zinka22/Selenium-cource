@@ -14,6 +14,7 @@
 |                 [Checkboxes и radiobuttons](tasks/radio_and_checkbox.md)                 |                   [radio_and_checkbox](solutions/radio_and_checkbox.py)                   |
 |                  [Переход на новую вкладку](tasks/switch_to_window.md)                   |                     [switch_to_window](solutions/switch_to_window.py)                     |
 |                   [Авторизация на сайте](tasks/test_authorization.md)                    |            [test_authorization](solutions/pytest_folder/test_authorization.py)            |
+|               [Обучающее задание: test_main_page](tasks/test_main_page.md)               |                 [test_main_page](solutions/page_object/test_main_page.py)                 |
 |                  [Параметризация тестов](tasks/test_parametrization.md)                  |          [test_parametrization](solutions/pytest_folder/test_parametrization.py)          |
 |          [Добавление в корзину со страницы товара](tasks/test_product_page.md)           |              [test_product_page](solutions/page_object/test_product_page.py)              |
 | [Запуск автотестов для разных языков интерфейса](tasks/test_run_for_different_locals.md) | [test_run_for_different_locals](solutions/pytest_folder/test_run_for_different_locals.py) |
