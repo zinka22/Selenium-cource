@@ -1,8 +1,14 @@
 import math
 import time
+import pytest
 
-from selenium.common.exceptions import (NoAlertPresentException,
-                                        NoSuchElementException)
+from selenium.common.exceptions import (
+    NoAlertPresentException,
+    NoSuchElementException,
+    TimeoutException,
+    UnexpectedAlertPresentException,
+    WebDriverException,
+)
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -37,4 +43,8 @@ class BasePage:
             alert.accept()
             time.sleep(5)
         except NoAlertPresentException:
-            print("No second alert presented")
+            pytest.fail("NoAlertPresentException: No second alert presented")
+        except TimeoutException:
+            pytest.fail(
+                "TimeoutException: Element second alert was not located in timeout time"
+            )
