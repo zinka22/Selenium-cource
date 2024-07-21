@@ -35,8 +35,11 @@
 
 *Используйте этот метод в тесте для получения проверочного кода:
 
-```
+```python
+import math
+
 from selenium.common.exceptions import NoAlertPresentException
+
 
 def solve_quiz_and_get_code(self):
     alert = self.browser.switch_to.alert
@@ -55,6 +58,6 @@ def solve_quiz_and_get_code(self):
 
 Чтобы увидеть проверочный код в консоли, запускайте PyTest с параметром -s:
 
-```
-pytest -s test_foo.py
+```shell
+pytest -s test_product_page.py
 ```
