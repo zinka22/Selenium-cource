@@ -9,13 +9,13 @@ def pytest_addoption(parser):
         "--browser_name",
         action="store",
         default="chrome",
-        help="Choose browser: chrome or firefox",
-        choices=("chrome", "firefox"),
+        help="Choose browser: chrome, firefox, edge",
+        choices=("chrome", "firefox", "edge"),
     )
     parser.addoption(
         "--language",
         action="store",
-        default="ru",
+        default="en",
         help="Choose language: es or fr",
     )
 
@@ -35,6 +35,8 @@ def browser(request):
         options = FirefoxOptions()
         options.set_preference("intl.accept_languages", user_language)
         browser = webdriver.Firefox(options=options)
+    elif browser_name == "edge":
+        browser = webdriver.Edge()
 
     browser.implicitly_wait(15)
     yield browser
