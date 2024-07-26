@@ -1,9 +1,8 @@
 import math
 import time
-import pytest
 
+import pytest
 from selenium.common.exceptions import (
-    NoAlertPresentException,
     NoSuchElementException,
     TimeoutException,
 )
@@ -40,8 +39,6 @@ class BasePage:
             print(f"Your code: {alert_text}")
             alert.accept()
             time.sleep(5)
-        except NoAlertPresentException:
-            pytest.fail("NoAlertPresentException: No second alert presented")
         except TimeoutException:
             pytest.fail(
                 "TimeoutException: Element second alert was not located in timeout time"
