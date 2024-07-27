@@ -2,10 +2,7 @@ import math
 import time
 
 import pytest
-from selenium.common.exceptions import (
-    NoSuchElementException,
-    TimeoutException,
-)
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
