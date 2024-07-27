@@ -1,6 +1,7 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
 
@@ -36,7 +37,11 @@ def browser(request):
         options.set_preference("intl.accept_languages", user_language)
         browser = webdriver.Firefox(options=options)
     elif browser_name == "edge":
-        browser = webdriver.Edge()
+        options = EdgeOptions()
+        options.add_experimental_option(
+            "prefs", {"intl.accept_languages": user_language}
+        )
+        browser = webdriver.Edge(options=options)
 
     browser.implicitly_wait(15)
     yield browser
