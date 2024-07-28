@@ -1,4 +1,5 @@
 # Задание содержится в tasks/test_product_page.md
+# Задание к негативным тестам содержится в tasks/task_negative_tests.md
 
 import pytest
 
