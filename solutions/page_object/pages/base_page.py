@@ -23,6 +23,26 @@ class BasePage:
             return False
         return True
 
+    def is_not_element_present(self, locator, timeout=4):
+        try:
+            WebDriverWait(self.browser, timeout).until(
+                ec.presence_of_element_located(locator)
+            )
+        except TimeoutException:
+            return True
+
+        return False
+
+    def is_disappeared(self, locator, timeout=5):
+        try:
+            WebDriverWait(self.browser, timeout, 1).until_not(
+                ec.presence_of_element_located(locator)
+            )
+        except TimeoutException:
+            return False
+
+        return True
+
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
         x = alert.text.split()[2]
