@@ -32,8 +32,6 @@ class BasePage:
         except TimeoutException:
             return True
 
-        return False
-
     def is_disappeared(self, locator, timeout=5):
         try:
             WebDriverWait(self.browser, timeout, 1).until_not(
