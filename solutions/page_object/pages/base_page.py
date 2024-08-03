@@ -28,6 +28,7 @@ class BasePage:
             WebDriverWait(self.browser, timeout).until(
                 ec.presence_of_element_located(locator)
             )
+            return False
         except TimeoutException:
             return True
 
