@@ -45,6 +45,6 @@ def browser(request):
         )
         browser = webdriver.Edge(options=options)
 
-    # browser.implicitly_wait(15)
+    browser.implicitly_wait(15)
     yield browser
     browser.quit()

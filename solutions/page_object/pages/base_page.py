@@ -37,10 +37,9 @@ class BasePage:
             WebDriverWait(self.browser, timeout, 1).until_not(
                 ec.presence_of_element_located(locator)
             )
+            return True
         except TimeoutException:
             return False
-
-        return True
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
