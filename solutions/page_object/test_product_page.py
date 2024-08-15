@@ -3,8 +3,9 @@
 
 import pytest
 
-from conftest import base_shop_url
 from pages.product_page import ProductPage
+
+base_shop_url = "https://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
 
 
 def test_guest_can_add_product_to_basket(browser):
