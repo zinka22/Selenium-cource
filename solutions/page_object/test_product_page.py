@@ -2,7 +2,6 @@
 # Задание к негативным тестам содержится в tasks/task_negative_tests.md
 
 import pytest
-
 from pages.product_page import ProductPage
 
 base_shop_url = "https://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"

@@ -19,9 +19,9 @@ class BasePage:
     def is_element_present(self, locator):
         try:
             self.browser.find_element(*locator)
+            return True
         except NoSuchElementException:
             return False
-        return True
 
     def is_not_element_present(self, locator, timeout=4):
         try:
