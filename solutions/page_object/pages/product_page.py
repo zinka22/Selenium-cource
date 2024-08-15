@@ -54,3 +54,6 @@ class ProductPage(BasePage):
         assert self.is_disappeared(
             ProductPageLocators.SUCCESS_MESSAGE
         ), "Success message is presented, but should disappear"
+
+    def __init__(self, browser, url, timeout=10):
+        super().__init__(browser, url, timeout)
