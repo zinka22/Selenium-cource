@@ -5,6 +5,7 @@ import pytest
 from pages.product_page import ProductPage
 
 base_shop_url = "https://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
+implicit_wait_default_value = 0
 
 
 def test_guest_can_add_product_to_basket(browser):
@@ -18,7 +19,7 @@ def test_guest_can_add_product_to_basket(browser):
 
 @pytest.mark.xfail
 def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
-    page = ProductPage(browser, base_shop_url, timeout=0)
+    page = ProductPage(browser, base_shop_url, timeout=implicit_wait_default_value)
     page.open()
     page.add_product_to_cart()
     page.solve_quiz_and_get_code()
