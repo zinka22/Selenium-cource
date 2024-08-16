@@ -6,6 +6,9 @@ from .locators import ProductPageLocators
 
 class ProductPage(BasePage):
 
+    def __init__(self, browser, url, timeout=10):
+        super().__init__(browser, url, timeout)
+
     def should_be_able_to_add_product_to_cart(self):
         self.should_be_product_url()
         self.should_button_add_to_cart_present()
@@ -54,6 +57,3 @@ class ProductPage(BasePage):
         assert self.is_disappeared(
             ProductPageLocators.SUCCESS_MESSAGE
         ), "Success message is presented, but should disappear"
-
-    def __init__(self, browser, url, timeout=10):
-        super().__init__(browser, url, timeout)
