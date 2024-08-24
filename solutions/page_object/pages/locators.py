@@ -11,10 +11,6 @@ class LoginPageLocators:
     REGISTER_FORM = (By.ID, "id_registration-email")
 
 
-class MainPageLocators:
-    LOGIN_LINK = (By.ID, "login_link")
-
-
 class ProductPageLocators:
     ADD_TO_CART = (By.CLASS_NAME, "btn-add-to-basket")
     PRODUCT_NAME = (By.CLASS_NAME, "product_main h1")
