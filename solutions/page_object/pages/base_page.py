@@ -13,8 +13,14 @@ class BasePage:
         self.url = url
         self.browser.implicitly_wait(timeout)
 
-    def open(self):
-        self.browser.get(self.url)
+    def is_disappeared(self, locator, timeout=5):
+        try:
+            WebDriverWait(self.browser, timeout, 1).until_not(
+                ec.presence_of_element_located(locator)
+            )
+            return True
+        except TimeoutException:
+            return False
 
     def is_element_present(self, locator):
         try:
@@ -32,14 +38,8 @@ class BasePage:
         except TimeoutException:
             return True
 
-    def is_disappeared(self, locator, timeout=5):
-        try:
-            WebDriverWait(self.browser, timeout, 1).until_not(
-                ec.presence_of_element_located(locator)
-            )
-            return True
-        except TimeoutException:
-            return False
+    def open(self):
+        self.browser.get(self.url)
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
