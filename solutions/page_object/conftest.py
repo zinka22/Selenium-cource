@@ -26,22 +26,23 @@ def browser(request):
     browser_name = request.config.getoption("browser_name")
     user_language = request.config.getoption("language")
     browser = None
-    if browser_name == "chrome":
-        options = ChromeOptions()
-        options.add_experimental_option(
-            "prefs", {"intl.accept_languages": user_language}
-        )
-        browser = webdriver.Chrome(options=options)
-    elif browser_name == "firefox":
-        options = FirefoxOptions()
-        options.set_preference("intl.accept_languages", user_language)
-        browser = webdriver.Firefox(options=options)
-    elif browser_name == "edge":
-        options = EdgeOptions()
-        options.add_experimental_option(
-            "prefs", {"intl.accept_languages": user_language}
-        )
-        browser = webdriver.Edge(options=options)
+    match browser_name:
+        case "chrome":
+            options = ChromeOptions()
+            options.add_experimental_option(
+                "prefs", {"intl.accept_languages": user_language}
+            )
+            browser = webdriver.Chrome(options=options)
+        case "firefox":
+            options = FirefoxOptions()
+            options.set_preference("intl.accept_languages", user_language)
+            browser = webdriver.Firefox(options=options)
+        case "edge":
+            options = EdgeOptions()
+            options.add_experimental_option(
+                "prefs", {"intl.accept_languages": user_language}
+            )
+            browser = webdriver.Edge(options=options)
 
     browser.implicitly_wait(15)
     yield browser
