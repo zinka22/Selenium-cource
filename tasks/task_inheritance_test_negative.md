@@ -23,8 +23,8 @@ from .locators import BasePageLocators
 class BasePage():
 ...
     def go_to_login_page(self):
-    link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
-    link.click()
+        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
+        link.click()
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
@@ -37,7 +37,7 @@ class BasePage():
 ```
 class MainPage(BasePage):
     def __init__(self, *args, **kwargs):
-    super(MainPage, self).__init__(*args, **kwargs)
+        super(MainPage, self).__init__(*args, **kwargs)
 ```
 
 Как вы уже знаете, метод `__init__` вызывается при создании объекта. Конструктор выше с ключевым словом `super` на самом
