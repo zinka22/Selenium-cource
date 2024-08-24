@@ -11,8 +11,8 @@
 
 ```
 class BasePageLocators():
-LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
 ```
 
 В файл base_page.py переносим соответствующие методы, заменяя класс с локаторами на BasePageLocators:
@@ -22,9 +22,9 @@ from .locators import BasePageLocators
 
 class BasePage():
 ...
-def go_to_login_page(self):
-link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
-link.click()
+    def go_to_login_page(self):
+    link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
+    link.click()
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
@@ -36,8 +36,8 @@ link.click()
 
 ```
 class MainPage(BasePage):
-def __init__(self, *args, **kwargs):
-super(MainPage, self).__init__(*args, **kwargs)
+    def __init__(self, *args, **kwargs):
+    super(MainPage, self).__init__(*args, **kwargs)
 ```
 
 Как вы уже знаете, метод __init__ вызывается при создании объекта. Конструктор выше с ключевым словом super на самом
@@ -50,10 +50,10 @@ MainPage.
 
 ```
 def test_guest_should_see_login_link_on_product_page(browser):
-link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
-page = ProductPage(browser, link)
-page.open()
-page.should_be_login_link()
+    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
+    page = ProductPage(browser, link)
+    page.open()
+    page.should_be_login_link()
 ```
 
 Добавьте самостоятельно второй тест
