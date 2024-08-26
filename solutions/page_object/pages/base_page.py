@@ -15,6 +15,10 @@ class BasePage:
         self.url = url
         self.browser.implicitly_wait(timeout)
 
+    def go_to_login_page(self):
+        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
+        link.click()
+
     def is_disappeared(self, locator, timeout=5):
         try:
             WebDriverWait(self.browser, timeout, 1).until_not(
@@ -43,6 +47,11 @@ class BasePage:
     def open(self):
         self.browser.get(self.url)
 
+    def should_be_login_link(self):
+        assert self.is_element_present(
+            BasePageLocators.LOGIN_LINK
+        ), "Login link is not presented"
+
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
         x = alert.text.split()[2]
@@ -60,12 +69,3 @@ class BasePage:
             pytest.fail(
                 "TimeoutException: Element second alert was not located in timeout time"
             )
-
-    def go_to_login_page(self):
-        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
-        link.click()
-
-    def should_be_login_link(self):
-        assert self.is_element_present(
-            BasePageLocators.LOGIN_LINK
-        ), "Login link is not presented"
