@@ -19,6 +19,7 @@ class BasePageLocators():
 ```
 from .locators import BasePageLocators
 
+
 class BasePage():
 ...
     def go_to_login_page(self):
@@ -35,6 +36,7 @@ class BasePage():
 
 ```
 class MainPage(BasePage):
+
     def __init__(self, *args, **kwargs):
         super(MainPage, self).__init__(*args, **kwargs)
 ```
