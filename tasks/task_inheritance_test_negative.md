@@ -12,7 +12,6 @@
 ```
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
 ```
 
 В файл base_page.py переносим соответствующие методы, заменяя класс с локаторами на BasePageLocators:
@@ -23,7 +22,7 @@ from .locators import BasePageLocators
 class BasePage():
 ...
     def go_to_login_page(self):
-        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
+        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
 
     def should_be_login_link(self):
