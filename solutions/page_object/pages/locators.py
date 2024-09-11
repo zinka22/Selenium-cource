@@ -8,6 +8,9 @@ class BasePageLocators:
 class LoginPageLocators:
     LOGIN_FORM = (By.ID, "id_login-username")
     REGISTER_FORM = (By.ID, "id_registration-email")
+    PASSWORD_FORM = (By.ID, "id_registration-password1")
+    CONFIRM_PASSWORD = (By.ID, "id_registration-password2")
+    SUCCESS_REGISTER = (By.CLASS_NAME, "alertinner wicon")
 
 
 class ProductPageLocators:

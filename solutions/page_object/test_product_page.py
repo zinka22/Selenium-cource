@@ -59,13 +59,14 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     login_page.should_be_login_page()
 
 
+@pytest.mark.login_guest_v
 class TestUserAddToBasketFromProductPage:
 
     @pytest.fixture(scope="function", autouse=True)
-    def setup(self):
-        #открыть страницу регистрации;
-        #зарегистрировать нового пользователя;
-        #проверить, что пользователь залогинен.
+    def setup(self, browser):
+        page = LoginPage(browser, shop_url_for_login)
+        page.register_new_user()
+
     def test_user_cant_see_success_message(self, browser):
         page = ProductPage(browser, base_shop_url, timeout=implicit_wait_default_value)
         page.open()
