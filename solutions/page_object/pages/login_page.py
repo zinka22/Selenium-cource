@@ -28,12 +28,19 @@ class LoginPage(BasePage):
         email = str(time.time()) + "@fakemail.org"
         register_form = self.browser.find_element(*LoginPageLocators.REGISTER_FORM)
         register_form.send_keys(email)
+
         password_form = self.browser.find_element(*LoginPageLocators.PASSWORD_FORM)
         password_form.send_keys("2q3w4e5r6t7y")
         confirm_password_form = self.browser.find_element(
             *LoginPageLocators.CONFIRM_PASSWORD
         )
         confirm_password_form.send_keys("2q3w4e5r6t7y")
+
+        confirm_registration = self.browser.find_element(
+            *LoginPageLocators.CONFIRM_REGISTRATION
+        )
+        confirm_registration.click()
+
         is_success_registered = self.browser.find_element(
             *LoginPageLocators.SUCCESS_REGISTER
         )

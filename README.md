@@ -16,6 +16,7 @@
 |                   [Авторизация на сайте](tasks/test_authorization.md)                    |            [test_authorization](solutions/pytest_folder/test_authorization.py)            |
 |               [Обучающее задание: test_main_page](tasks/test_main_page.md)               |                 [test_main_page](solutions/page_object/test_main_page.py)                 |
 |                  [Параметризация тестов](tasks/test_parametrization.md)                  |          [test_parametrization](solutions/pytest_folder/test_parametrization.py)          |
+|              [Группировка тестов и setup](tasks/task_grouping_and_setup.md)              |              [test_product_page](solutions/page_object/test_product_page.py)              |
 |          [Добавление в корзину со страницы товара](tasks/test_product_page.md)           |              [test_product_page](solutions/page_object/test_product_page.py)              |
 |           [Негативные тесты для страницы товара](tasks/task_negative_tests.md)           |              [test_product_page](solutions/page_object/test_product_page.py)              |
 |          [Плюсы наследования: пример](tasks/task_inheritance_test_negative.md)           |              [test_product_page](solutions/page_object/test_product_page.py)              |

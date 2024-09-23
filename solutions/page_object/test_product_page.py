@@ -1,5 +1,6 @@
 # Задание содержится в tasks/test_product_page.md
 # Задание к негативным тестам содержится в tasks/task_negative_tests.md
+# Задание для класса TestUserAddToBasketFromProductPage (запуск с -m login_guest) в tasks/task_grouping_and_setup.md
 
 import pytest
 
@@ -10,6 +11,8 @@ base_shop_url = "https://selenium1py.pythonanywhere.com/catalogue/the-shellcoder
 shop_url_for_login = (
     "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
 )
+
+login_page_url = "https://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
 
 
 def test_guest_can_add_product_to_basket(browser):
@@ -61,14 +64,16 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
 
 @pytest.mark.login_guest_v
 class TestUserAddToBasketFromProductPage:
-
     @pytest.fixture(scope="function", autouse=True)
     def setup(self, browser):
-        page = LoginPage(browser, shop_url_for_login)
+        page = LoginPage(browser, login_page_url)
+        page.open()
+        page.should_be_login_page()
         page.register_new_user()
+        page.should_be_authorized_user()
 
     def test_user_cant_see_success_message(self, browser):
-        page = ProductPage(browser, base_shop_url, timeout=implicit_wait_default_value)
+        page = ProductPage(browser, base_shop_url)
         page.open()
         page.should_not_be_success_message()
 
