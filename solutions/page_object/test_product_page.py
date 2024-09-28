@@ -10,7 +10,6 @@ base_shop_url = "https://selenium1py.pythonanywhere.com/catalogue/the-shellcoder
 shop_url_for_login = (
     "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
 )
-implicit_wait_default_value = 0
 
 
 def test_guest_can_add_product_to_basket(browser):
