@@ -102,6 +102,7 @@
                page.go_to_login_page()          # выполняем метод страницы — переходим на страницу логина
 
     4. Убедитесь, что тест проходит, запустив его командой:
+
        `pytest -v --tb=line --language=en test_main_page.py`
 
 6) Методы-проверки в Page Object
@@ -144,6 +145,7 @@
                self.browser = browser
                self.url = url
                self.browser.implicitly_wait(timeout)
+
    upd: в задаче [#54](https://github.com/zinka22/Selenium-cource/issues/54) убрали неявные ожидания. Причина: в
    результате анализа прогона тестов с наличием и отсутствием неявного ожидания падение при удалении строк с
    implicitly_wait воспроизвести не удалось.
