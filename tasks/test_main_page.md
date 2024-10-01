@@ -101,9 +101,7 @@
                page.open()                      # открываем страницу
                page.go_to_login_page()          # выполняем метод страницы — переходим на страницу логина
 
-    4. Убедитесь, что тест проходит, запустив его командой:
-
-       `pytest -v --tb=line --language=en test_main_page.py`
+    4. Убедитесь, что тест проходит, запустив его командой `pytest -v --tb=line --language=en test_main_page.py`.
 
 6) Методы-проверки в Page Object
 
