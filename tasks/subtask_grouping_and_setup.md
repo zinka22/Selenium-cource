@@ -11,7 +11,7 @@
 
 Давайте, например, объединим в группу два теста в файле test_main_page.py и пометим его меткой `login_guest`:
 
-   ```
+```
 @pytest.mark.login_guest
 class TestLoginFromMainPage():
     # не забываем передать первым аргументом self
@@ -20,7 +20,7 @@ class TestLoginFromMainPage():
 
     def test_guest_should_see_login_link(self, browser):
         # реализация теста
-   ```
+```
 
 Попробуйте запустить тесты в этом файле с меткой (нужно добавить "-m login_guest"). Вы увидите, что запустились оба
 теста, хотя метка всего одна.
@@ -39,7 +39,7 @@ class TestLoginFromMainPage():
 интернет-магазин пока не имеет возможности создавать объекты по API, но в идеальном мире мы бы написали вот такой
 тест-класс в файле test_product_page.py:
 
-   ```
+```
 @pytest.mark.login
 class TestLoginFromProductPage():
     @pytest.fixture(scope="function", autouse=True)
@@ -60,4 +60,4 @@ class TestLoginFromProductPage():
     def test_guest_should_see_login_link(self, browser):
         page = ProductPage(browser, self.link)
         # дальше обычная реализация теста
-   ```
+```
