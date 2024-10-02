@@ -55,6 +55,12 @@ email = str(time.time()) + "@fakemail.org"
 
 ```
 pytest -s <путь> --language=en --browser_name=edge -m login_guest
+```
+
+```
 pytest -s <путь> --language=en --browser_name=firefox -m login_guest
+```
+
+```
 pytest -s <путь> --language=en --browser_name=chrome -m login_guest
 ```
