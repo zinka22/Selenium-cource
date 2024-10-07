@@ -8,11 +8,11 @@ from pages.login_page import LoginPage
 from pages.product_page import ProductPage
 
 base_shop_url = "https://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
+login_page_url = "https://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
 shop_url_for_login = (
     "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
 )
 
-login_page_url = "https://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
 
 
 def test_guest_can_add_product_to_basket(browser):
