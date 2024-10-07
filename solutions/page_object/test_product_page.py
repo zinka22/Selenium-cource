@@ -14,7 +14,6 @@ shop_url_for_login = (
 )
 
 
-
 def test_guest_can_add_product_to_basket(browser):
     page = ProductPage(browser, base_shop_url)
     page.open()
