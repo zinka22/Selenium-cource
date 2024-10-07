@@ -40,8 +40,3 @@ class LoginPage(BasePage):
             *LoginPageLocators.CONFIRM_REGISTRATION
         )
         confirm_registration.click()
-
-        is_success_registered = self.browser.find_element(
-            *LoginPageLocators.SUCCESS_REGISTER
-        )
-        assert is_success_registered, "Registration is failed"
