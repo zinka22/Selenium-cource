@@ -1,4 +1,5 @@
 # Задание содержится в tasks/test_main_page.md
+# Изменение к заданию в tasks/subtask_grouping_and_setup.md
 
 import pytest
 
