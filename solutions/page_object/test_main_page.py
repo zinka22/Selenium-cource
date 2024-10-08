@@ -2,7 +2,6 @@
 # Изменение к заданию в tasks/subtask_grouping_and_setup.md
 
 import pytest
-
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
 
