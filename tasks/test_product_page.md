@@ -56,7 +56,7 @@ def solve_quiz_and_get_code(self):
         print("No second alert presented")
 ```
 
-Чтобы увидеть проверочный код в консоли, запускайте PyTest с параметром -s:
+Чтобы увидеть проверочный код в консоли, запускайте pytest с параметром -s:
 
 ```shell
 pytest -s test_product_page.py
