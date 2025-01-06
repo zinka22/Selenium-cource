@@ -29,8 +29,7 @@ def browser(request):
         options = FirefoxOptions()
         options.set_preference("intl.accept_languages", user_language)
         browser = webdriver.Firefox(options=options)
-
-    browser.implicitly_wait(15)
+    browser.implicitly_wait(10)
     yield browser
     browser.quit()
 
